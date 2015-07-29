@@ -1,3 +1,10 @@
 bronnen:
 https://www.alcatel-lucent.com/about/history
 http://www.reuters.com/article/2015/05/07/us-huawei-outlook-ceo-idUSKBN0NS23P20150507
+https://en.wikipedia.org/wiki/Waterfall_model
+https://en.wikipedia.org/wiki/Agile_software_development
+https://en.wikipedia.org/wiki/Scrum_%28software_development%29
+https://en.wikipedia.org/wiki/Scrum_%28rugby%29
+https://nl.wikipedia.org/wiki/Scrum_%28softwareontwikkelmethode%29
+https://nl.wikipedia.org/wiki/Scrum_%28rugby%29
+https://en.wikipedia.org/wiki/User_story
