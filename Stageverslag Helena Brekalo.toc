@@ -5,8 +5,14 @@
 \contentsline {subsubsection}{\numberline {2.2.1}Scrum}{3}
 \contentsline {subsubsection}{\numberline {2.2.2}Continuous integration}{4}
 \contentsline {subsection}{\numberline {2.3}Stage-opdracht}{5}
+\contentsline {subsubsection}{\numberline {2.3.1}Onderzoek en literatuurstudie}{5}
+\contentsline {subsubsection}{\numberline {2.3.2}Enqu\^ete}{5}
+\contentsline {subsubsection}{\numberline {2.3.3}Ontwikkeling dashboard}{5}
+\contentsline {paragraph}{Gebruikte tools}{5}
+\contentsline {paragraph}{Gebruikte talen}{5}
 \contentsline {subsection}{\numberline {2.4}Resultaat}{5}
-\contentsline {section}{\numberline {3}Relatie stage en opleiding}{5}
-\contentsline {section}{\numberline {4}Krititsche reflectie competenties}{5}
-\contentsline {section}{\numberline {5}Conclusie}{5}
-\contentsline {section}{\numberline {6}Annex}{5}
+\contentsline {subsection}{\numberline {2.5}Initiatieven voor interns}{6}
+\contentsline {section}{\numberline {3}Relatie stage en opleiding}{6}
+\contentsline {section}{\numberline {4}Krititsche reflectie competenties}{6}
+\contentsline {section}{\numberline {5}Conclusie}{6}
+\contentsline {section}{\numberline {6}Annex}{6}

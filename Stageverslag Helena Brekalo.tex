@@ -79,10 +79,11 @@ De term "scrum" is afkomstig vanuit rugby, waarbij de twee teams voorovergebogen
 De gelijkenis met de software-ontwikkeling-scrum is dat het team heel nauw samenwerkt, inspeelt op veranderde omstandigheden en zo samen tot een doel komt. De samenwerking uit zich in dagelijkse stand-up meetings, waarbij iedereen vertelt wat hij/zij de dag ervoor heeft gedaan, welke problemen er eventueel zijn opgetreden en of er daar hulp bij nodig is en wat de planning voor de komende dag is. Op deze manier is iedereen op de hoogte van wie waarmee bezig is en kunnen problemen snel opgelost worden. Bij het NA-C team in Antwerpen maakt men hierbij ook gebruik van het agile dashboard van JIRA, waarbij gevisualiseerd wordt wie waarmee bezig is. \todo{Foto toevoegen van JIRA dashboard} Indien iemand ergens problemen mee heeft, doet men aan pair-programming, waarbij men bij elkaar gaat zitten en samen nadenken over hoe het desbetreffende probleem opgelost kan worden en dit ook samen uit te werken.\\
 In het NA-C team heeft men sprints van twee weken, wat wil zeggen dat men elke twee weken een evaluatie doet van het werk dat in de afgelopen twee weken verzet is en waarbij eventueel demo's gegeven worden van wat er gerealiseerd is (sprint review). Samen met het einde van de sprint is er de sprint retrospective, waarbij men gaat oplijsten wat er goed en minder goed is gegaan, welke problemen er (binnen het team) waren en hoe deze opgelost kunnen worden. Aan het begin van een sprint is er dan de sprint planning, waarin er bekeken wordt wat er moet gebeuren met welke prioriteit en wie wat gaat doen (heel algemeen). Men maakt hierbij gebruik van user-stories, die een bepaalde taak omschrijven en de subtaken ervan. Het beschrijft wat de gebruiker nodig heeft bij het uitvoeren van zijn taak en bepalen zodus wat er moet ontwikkeld worden om de gebruiker hierbij te helpen. Het omschrijft het "wie", "wat" en "waarom" van deze vereisten op hoog niveau.
 \subsubsection{Continuous integration}
-Aangezien er regelmatig releases van software zijn, doet men aan continuous integration, wat inhoudt dat wanneer iemand klaar is met het schrijven van een stuk code en deze commit, alle builds en testen hierrond automatisch zullen runnen zodat fouten in een vroeg stadium kunnen gevonden en opgelost worden.
+Aangezien er regelmatig releases van software zijn, doet men aan continuous integration, wat inhoudt dat wanneer iemand klaar is met het schrijven van een stuk code en deze commit, alle builds en testen hierrond automatisch zullen runnen zodat fouten in een vroeg stadium kunnen gevonden en opgelost worden.\\
+In Antwerpen maakt men gebruik van Jenkins\footnote{https://jenkins-ci.org/}, een open-source continuous integration systeem. Jenkins heeft een dashboard dat een overzicht toont van alle builds, maar je kan ook filteren op zelfgemaakte criteria, zodat je enkel de status van bepaalde builds ziet. Het overzicht toont een gekleurde bol om aan te geven of de laatste build geslaagt (groen/blauw) of gefaald is. Als er testen gefaald zijn, dan zal de bol geel kleuren.\\
+Er is ook een weerbericht dat toont hoe stabiel de build is, waarbij slecht weer duidt op een instabiele build en goed weer op een satbiele build. \todo{foto van toevoegen} \\
+Het probleem met dit dashboard is dat het niet echt overzichtelijk is. De kleur van de bollen trekt wel de aandacht, maar als je wil zien over welke build het gaat, is dit niet leesbaar, tenzij je je vlak voor het scherm bevindt. Het Jenkins dashboard wordt op de werkvloer weergegeven op een grote televisie, maar men heeft niet de neiging hiernaar te kijken tijdens de uren, waardoor gefaalde builds enkel maar zichtbaar worden voor het team wanneer ze zelf Jenkins openen op hun PC of tijdens de stand-up. \todo{Foto invoegen, getrokken op 29072015 1418} 
 
-
-Men werkt in \textit{sprints} van twee weken, waarbij er een tweewekelijks doel wordt gesteld dat wordt ge\"evalueerd en eventueel aangepast.
 
 -scrum
 -agile
@@ -92,12 +93,29 @@ Men werkt in \textit{sprints} van twee weken, waarbij er een tweewekelijks doel 
 -erg betrokken: standup meetings, sprint meeting, planning meeting, demo (Zelf een moeten geven)
 -behulpzaam team (onderling, ook voor mij)
 \subsection{Stage-opdracht}
+Mijn stage-opdracht bestond erin om Jenkins awareness te cre\"eren aan de hand van een dashboard dat een beter overzicht toont.
+Als fouten meer in het oog springen, kunnen ze nog sneller verholpen worden en is er meer sprake van continuous integration. \todo{lame zin, maak beter!} Gedurende heel mijn stage werd ik enorm betrokken bij alles wat het team deed; zo deed ik dagelijks mee aan de stand-up meetings en werd ik meegevraagd in de sprint planning, sprint review en de retrospective, om zo een idee te krijgen hoe het er in een bedrijf aan toe gaat. Ook al kon ik niet meteen volgen waar ze het over hadden, het heeft me enorm veel bijgeleerd over hoe deze manier van werken het team sterker kan maken gezien iedereen (bijna) dagelijks updates krijgt over wie waarmee bezig is en de korte evaluatieperiodes ervoor zorgen dat er kort op de bal gespeeld kan worden.\\
+Er werd voor gezorgd dat ik mijn eigen project kreeg, waarbij er dan ook tweewekelijkse sprints gepland werden, zodat ik een idee kreeg van hoe het eraan toe gaat.\\
+Mijn eerste sprint bestond uit het maken van een literatuurstudie, op aanraden van Bart, om zo te zien waarop ik moet letten bij het maken van een (goed) dashboard en wat er verbeterd kan worden aan het originele Jenkins dashboard.\\
+\todo{
+Tweede: dashboard maken
+Derde: feedback krijgen (Demo! zowel voor antwerpen, bangalor als chennai, maar ook binnen het team zelf feedback vragen)}
+\subsubsection{Onderzoek en literatuurstudie}
+\subsubsection{Enqu\^ete}
+\subsubsection{Ontwikkeling dashboard}
+\paragraph{Gebruikte tools}
+ linux, dashing
+\paragraph{Gebruikte talen}
+html, (s)css, coffeescript, ruby, javascript (batman bindings)
 \subsection{Resultaat}
-
+\todo{screenshot tonen}
+\subsection{Initiatieven voor interns}
+bijeenkomsten: samen lunchen, infosessie over Alcatel, gesprek met Joeri
 \section{Relatie stage en opleiding}
 -scrum: swop
 -pair programming: swop
--zelf project plannen en uitwerken, met tussentijdse evaluaties
+-zelf project plannen en uitwerken, met tussentijdse evaluaties \~ P\&O
+-documentatie: ogp
 \section{Krititsche reflectie competenties}
 
 \section{Conclusie}
