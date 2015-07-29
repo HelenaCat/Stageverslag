@@ -2,9 +2,10 @@
 \contentsline {section}{\numberline {2}Stage}{3}
 \contentsline {subsection}{\numberline {2.1}Afdeling: Motive NA}{3}
 \contentsline {subsection}{\numberline {2.2}Werkmethoden}{3}
-\contentsline {subsection}{\numberline {2.3}Stage-opdracht}{3}
-\contentsline {subsection}{\numberline {2.4}Resultaat}{3}
-\contentsline {section}{\numberline {3}Relatie stage en opleiding}{3}
-\contentsline {section}{\numberline {4}Krititsche reflectie competenties}{3}
-\contentsline {section}{\numberline {5}Conclusie}{3}
-\contentsline {section}{\numberline {6}Annex}{3}
+\contentsline {subsubsection}{\numberline {2.2.1}Scrum}{3}
+\contentsline {subsection}{\numberline {2.3}Stage-opdracht}{4}
+\contentsline {subsection}{\numberline {2.4}Resultaat}{4}
+\contentsline {section}{\numberline {3}Relatie stage en opleiding}{4}
+\contentsline {section}{\numberline {4}Krititsche reflectie competenties}{4}
+\contentsline {section}{\numberline {5}Conclusie}{4}
+\contentsline {section}{\numberline {6}Annex}{4}
