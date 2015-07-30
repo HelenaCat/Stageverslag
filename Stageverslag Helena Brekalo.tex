@@ -103,15 +103,30 @@ De derde en laatste sprint bestond uit het voorstellen van de eerste versie van 
 
 \subsubsection{Sprint 1: Onderzoek en literatuurstudie} 
 \label{sprint1}
-Deze kan gevonden worden in de annex. \todo{anders verwoorden?}\\
-\paragraph{Enqu\^ete} \todo{wegdoen denk ik}
-De enqu\^ete en de resultatentabel zijn ook te vinden in de annex. \todo{referentie ernaar}
+\paragraph{Literatuurstudie} Tijdens de eerste sprint heb ik onderzoek gevoerd naar hoe goede dashboards eruit zien en hoe je ze overzichtelijk kan houden. Hierrond heb ik een literatuurstudie gemaakt, die gevonden kan worden in de annex. \todo{anders verwoorden?} Uit deze literatuurstudie bleek inderdaad dat het voorziene Jenkins dashboard niet voldeed aan veel van de vereisten, aangezien je niet in \'e\'en oogopslag de belangrijkste info kan vergaren.\\
+Naast de literatuurstudie heb ik ook gezocht naar tools om dashboards te maken, waarbij ik van een collega op de afdeling de aanbeveling kreeg om Dashing\footnote{http://dashing.io/} te gebruiken, waarbij hij ook een demo gaf. \todo{laatste deel zin weg?} Na het bekijken van nog enkele andere tools om dashboards te ontwikkelen, heb ik uiteindelijk voor Dashing gekozen, aangezien het enorm veel flexibiliteit biedt (je kan het dashboard helemaal inrichten zoals je wilt), \todo{deel tussen haakjes weg?} zodat ik het dashboard helemaal zou kunnen maken zoals ik het in gedachten had. \todo{anders verwoorden?}
+\paragraph{Enqu\^ete}
+Na het onderzoek en de literatuurstudie, heb ik een voorstel voor dashboardontwerpen gemaakt en deze voorgelegd aan de mensen bij NA-C. Ik liet hen hierbij een kleine enqu\^ete invullen waarbij ze konden kiezen voor verschillende designs en ook opmerkingen geven. Uit die opmerkingen zijn nog nuttige commentaren gekomen, bijvoorbeeld dat het tijdstip van de laatste build ook best getoond kan worden. De enqu\^ete en de resultatentabel zijn ook te vinden in de annex. \todo{referentie ernaar}
 \subsubsection{Sprint 2: Ontwikkeling dashboard} 
 \label{sprint2}
+Op het einde van de eerste sprint heb ik met Bart een sprint review en retrospective gehouden, om te zien waar ik stond. We hebben deze meeting gecombineerd met de sprint planning, waarbij ik mocht aangeven hoe ik van plan was het dashboard uit te werken en met welke tools. Ik werd hierin heel vrij gelaten, zodat ik zelf kon ontdekken wat me lag en wat minder. \todo{beter verwoorden}
 \paragraph{Gebruikte tools}
- linux, dashing
+Dashing is een dashboard framework dat geschreven is in Sinatra (meer hierover in de volgende paragraaf), een open source software web applicatie geschreven in Ruby. De ontwikkeling gebeurde op Linux, waarbij ik gebruik maakte van Ubuntu 14.04. Op deze PC is dan een lokale Jenkins-omgeving opgezet, zodat ik het dashboard kon testen met mijn eigen projectjes. De code schrijven gebeurde in gedit zelf en debuggen werd gedaan via de terminal. \todo{nog zaken toevoegen?} \\
+De "tegels" op het dashboard worden omschreven als "widgets" waarbij je verschillende soorten widgets kan hebben. Ik heb me toegespitst op een widget om informatie over Jenkins te tonen. Deze widget kan dan gebruikt worden voor verschillende builds, het is niet de bedoeling om voor elke build een nieuw widget te ontwikkelen (tenzij je andere informatie wilt tonen).
 \paragraph{Gebruikte talen}
-html, (s)css, coffeescript, ruby, javascript (batman bindings)
+Het schrijven van het dashboard werd gedaan in verschillende talen, hieronder een opsomming welke taal wat voorzag \todo{anders zeggen?}.
+\begin{description}
+\item[HTML] HTML wordt gebruikt om te bepalen hoe de inhoud getoond wordt op de widget, dus welk deel als titel zal getoond worden en waar de elementen op de widget staan. De informatie die getoond wordt, wordt via Batman Bindings\footnote{http://batmanjs.org/} uit de JSON data van de Jenkins server geparset. \todo{klopt dit helemaal? Denk het wel.}
+\item[(S)CSS] CSS wordt gebruikt om de tekst uit de HTML-file op te maken (grootte van de tekst, stijl, kleur,...), waarbij SCCS (Sassy CSS) ervoor zorgt dat je ook variabelen kan gebruiken, wat niet mogelijk is in standaard CSS. Op deze manier kan je dan (kleur)code hergebruiken via variabelen. \todo{beter zeggen}
+\item[Javascript] Javascript werd gebruikt in de Batman Bindings, die ervoor zorgt dat de data die van de website geparset wordt, dynamisch gebruikt kan worden in de HTML-files (via data-bind).\todo{is dit te diep erop ingegaan?} Op zich is de Batman Bindings-library klaar om te gebruiken, maar om een tijdstip te parsen (dat werd weergegeven als Unix timestamp), heb ik nog enkele lijnen Javascript-code moeten toevoegen, alsook de moment.js-library.
+\item[Coffeescript] Coffeescript is een taal die transcompileert naar Javascript. De .coffee-file voor het widget\todo{of de widget?} specifi\"eert hoe de data, die via de HTML-file opgevraagd wordt, weergegeven wordt. Deze file was van belang om bijvoorbeeld het juiste weerbericht te tonen. Het coffeescript parset\todo{juist vervoegd?} de data die via de Batman Bindings werd opgehaald en geeft aan hoe deze doorgegeven wordt aan de HTML-file. Zonder de .coffee-file zou er enkel \textit{plain text} te zien zijn op de widget.
+\item[Ruby] Dashing maakt gebruik van Embedded Ruby om te bepalen welke tegels getoond worden op het dashboard en van plain Ruby om de data op te halen en te parsen vanuit de juiste plaats (nl. de Jenkins server) via de JSON-data die werd voortgebracht hierdoor. Ook wordt hier de link gelegd tussen de build jobs die getoond \emph{kunnen} (niet per s\'e zullen\footnote{Dat wordt bepaald door de Embedded Ruby file.}) worden op het dashboard.
+\item[JQuery] JQuery wordt gebruikt in de Coffeescript file om CSS-gewijs klassen of ID's te gebruiken van elementen waarop je een bepaalde actie wil uitvoeren.
+\item[JSON] JSON werd gebruikt om de data uit van de Jenkins server te parsen, zodat deze opgevraagd kon worden in de Ruby-file.
+\end{description}
+Omdat geen van deze talen me helemaal eigen was, heb ik enkele dagen genomen om de basics te leren via Codecademy\footnote{https://www.codecademy.com/}. Dit was voldoende om me op weg te zetten om zelf verder te experimenteren. \todo{dat laatste mss weglaten?}
+Een widget wordt opgesteld door middel van een .HTML-file, een .SCSS-file en een .coffee-file.\todo{waar dit zetten?}
+html, (s)css, coffeescript, Sinatra(ruby), javascript (batman bindings), jquery
 \subsubsection{Sprint 3: Feedback en verbetering}
 \label{sprint3}
 vermelden dat demo gedaan tijdens sprint 2 (naar einde toe), zo (positieve) reacties gekregen en over gepraat. tijdens sprint 3 dan demo gegeven op tv, bevraging gedaan: wat goed/slecht
