@@ -112,10 +112,17 @@ Het probleem met dit dashboard is dat het niet echt overzichtelijk is. De kleur 
 \subsection{Stage-opdracht}
 Mijn stage-opdracht bestond erin om Jenkins awareness te cre\"eren aan de hand van een dashboard dat een beter overzicht toont.
 Als fouten meer in het oog springen, kunnen ze nog sneller verholpen worden en is er meer sprake van continuous integration. \todo{lame zin, maak beter!} Gedurende heel mijn stage werd ik enorm betrokken bij alles wat het team deed; zo deed ik dagelijks mee aan de stand-up meetings en werd ik meegevraagd in de sprint planning, sprint review en de retrospective, om zo een idee te krijgen hoe het er in een bedrijf aan toe gaat. Ook al kon ik niet meteen volgen waar ze het over hadden, het heeft me enorm veel bijgeleerd over hoe deze manier van werken het team sterker kan maken gezien iedereen (bijna) dagelijks updates krijgt over wie waarmee bezig is en de korte evaluatieperiodes ervoor zorgen dat er kort op de bal gespeeld kan worden.\\
-Er werd voor gezorgd dat ik mijn eigen project kreeg, waarbij er dan ook tweewekelijkse sprints gepland werden, zodat ik een idee kreeg van hoe het eraan toe gaat.\\
+Er werd voor gezorgd dat ik mijn eigen project kreeg, waarbij er dan ook tweewekelijkse sprints gepland werden, zodat ik een idee kreeg van hoe het eraan toe gaat. Er werd voor mij een JIRA-pagina aangemaakt, waarop ik mijn vooruitgang kon bijhouden door taken aan te maken die ik wou doen en problemen kon rapporteren. Een screenshot van mijn JIRA-dashboard is te zien in Figuur \ref{my_jira}.
 Mijn eerste sprint bestond uit het maken van een literatuurstudie, op aanraden van Bart, om zo te zien waarop ik moet letten bij het maken van een (goed) dashboard en wat er verbeterd kan worden aan het originele Jenkins dashboard. Eens ik me een idee gevormd had van hoe ik wou dat het dashboard eruit zou zien, heb ik enkele voorstellen opgemaakt en een kleine enqu\^ete gemaakt binnen het team, om te kijken welke voorkeuren zij hadden. Hierop wordt dieper ingegaan in sectie \ref{sprint1}.\\
 Vervolgens ben ik begonnen met het implementeren van het dashboard, dit was mijn tweede sprint. Het proces van hoe ik tot het resultaat ben gekomen, is te vinden in sectie \ref{sprint2}.\\
 De derde en laatste sprint bestond uit het voorstellen van de eerste versie van het dashboard en hierover feedback krijgen, om het dashboard vervolgens te verbeteren. Tijdens de eindfase van deze sprint werd het dashboard in gebruik genomen op de Jenkins server van Alcatel-Lucent. Dit wordt besproken in sectie \ref{sprint3}.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{myJIRAscreenshot.png}
+\caption{Het JIRA-dashboard voor mijn internship.} 
+\label{my_jira}
+\end{figure}
 
 \subsubsection{Sprint 1: Onderzoek en literatuurstudie} 
 \label{sprint1}
@@ -152,8 +159,9 @@ De verschillende bestanden worden als volgt gebruikt:
 \label{sprint3}
 Na de sprint review heb ik de Alcatel-Lucent Jenkins-server ge\"integreerd in het dashboard, wat nog anderhalve dag van debugging vroeg, gezien de Jenkins-server nu niet lokaal runde, maar op een andere server. Ook gebruikt men op Alcatel-Lucent een andere versie van Jenkins, waardoor bepaalde sleutelwoorden waarop geparset wordt anders heten.\\
 Na de sprint retrospective van sprint 2 en de sprint planning van sprint 3 heb ik nog een enqu\^ete gedaan om positieve en negatieve puntjes te verzamelen waar men bij de voorstelling van het dashboard tijdens de demo misschien niet was opgekomen. De resultaten van deze enq\^ete zijn te vinden in de annex.\todo{verwijzing toevoegen}
+\paragraph{Ingebruikname} \todo{over vertellen}
 \subsection{Resultaat}
-De eerste versie van het dashboard is te zien in Figuur \ref{dash_1}. Het dashboard in zijn huidige vorm is gemaakt om getoond te worden op een HD-televisie met 16:9 ratio. Het is de bedoeling dat er zes tegels naast elkaar kunnen staan en dat er drie rijen zijn, wat maakt dat de status van 18 build jobs gelijktijdig getoond kunnen worden. Dit bleek ruim voldoende voor het NA-C team, aangezien er altijd maar op enkele builds tegelijkertijd gefocust wordt.
+De eerste versie van het dashboard is te zien in Figuur \ref{dash_1}. Het dashboard in zijn huidige vorm is gemaakt om getoond te worden op een HD-televisie met 16:9 ratio. Het is de bedoeling dat er zes tegels naast elkaar kunnen staan en dat er drie rijen zijn, wat maakt dat de status van 18 build jobs gelijktijdig getoond kunnen worden. Dit bleek ruim voldoende voor het NA-C team, aangezien er altijd maar op enkele builds tegelijkertijd gefocust wordt.\todo{Indien er een definitieve (dwz veranderde) versie is, praat erover!}
 
 \begin{figure}[ht!]
 \centering
