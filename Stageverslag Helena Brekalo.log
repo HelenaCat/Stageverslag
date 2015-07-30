@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.29)  29 JUL 2015 14:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.7.29)  30 JUL 2015 08:12
 entering extended mode
 **Stageverslag*Helena*Brekalo.tex
 
@@ -720,7 +720,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [2
 
 ]
-Overfull \hbox (4.18578pt too wide) in paragraph at lines 75--81
+Overfull \hbox (4.18578pt too wide) in paragraph at lines 75--82
 \OT1/cmr/m/n/10 komt. De samen-werk-ing uit zich in dageli-jkse stand-up meet-i
 ngs, waar-bij iedereen
  []
@@ -728,17 +728,22 @@ ngs, waar-bij iedereen
 [3
 
 ] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
 
-LaTeX Warning: Marginpar on page 5 moved.
+ []
 
-[5] [6]
+[5]
+
+LaTeX Warning: Marginpar on page 6 moved.
+
+[6]
 ("C:\Users\hbrekalo\Documents\Stage\Verslag\Stageverslag\Stageverslag Helena Br
 ekalo.aux") ) 
 Here is how much of TeX's memory you used:
- 12653 strings out of 493921
- 249369 string characters out of 3144867
- 309457 words of memory out of 3000000
- 15702 multiletter control sequences out of 15000+200000
+ 12669 strings out of 493921
+ 249760 string characters out of 3144867
+ 302760 words of memory out of 3000000
+ 15718 multiletter control sequences out of 15000+200000
  12460 words of font info for 47 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,9n,76p,1026b,695s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -752,7 +757,7 @@ b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C
 ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "Stageverslag Helena Brekalo.pdf" (7 pages, 147292 bytes).
+Output written on "Stageverslag Helena Brekalo.pdf" (7 pages, 148965 bytes).
 PDF statistics:
  69 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
