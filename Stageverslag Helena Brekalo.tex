@@ -78,22 +78,37 @@ Bij het klassieke watervalmodel stelt men eerst de vereisten op, om deze vervolg
 niet optimaal verloopt, gezien de klant nog van gedachte kan veranderen over de requirements die hij wil. Als deze pas in de maintenance fase ontdekt en aangekaart worden, is het heel kostelijk om (grote) veranderingen opnieuw door te voeren.\\
 Bij een agile werkmethode, waar scrum een onderdeel van is, gaat men er van uit dat de klant op voorhand niet perfect kan weten wat hij wil en dat hij dus de requirements zal aanpassen.\\
 De term "scrum" is afkomstig vanuit rugby, waarbij de twee teams voorovergebogen tegen elkaar leunen, met de hoofden bij elkaar. De bal wordt dan in deze groep gegooid, waarop ze proberen om de bal als eerste in hun bezit te krijgen.\\
-De gelijkenis met de software-ontwikkeling-scrum is dat het team heel nauw samenwerkt, inspeelt op veranderde omstandigheden en zo samen tot een doel komt. De samenwerking uit zich in dagelijkse stand-up meetings, waarbij iedereen vertelt wat hij/zij de dag ervoor heeft gedaan, welke problemen er eventueel zijn opgetreden en of er daar hulp bij nodig is en wat de planning voor de komende dag is. Op deze manier is iedereen op de hoogte van wie waarmee bezig is en kunnen problemen snel opgelost worden. Bij het NA-C team in Antwerpen maakt men hierbij ook gebruik van het agile dashboard van JIRA, waarbij gevisualiseerd wordt wie waarmee bezig is. \todo{Foto toevoegen van JIRA dashboard} Indien iemand ergens problemen mee heeft, doet men aan pair-programming, waarbij men bij elkaar gaat zitten en samen nadenken over hoe het desbetreffende probleem opgelost kan worden en dit ook samen uit te werken.\\
+De gelijkenis met de software-ontwikkeling-scrum is dat het team heel nauw samenwerkt, inspeelt op veranderde omstandigheden en zo samen tot een doel komt. De samenwerking uit zich in dagelijkse stand-up meetings, waarbij iedereen vertelt wat hij/zij de dag ervoor heeft gedaan, welke problemen er eventueel zijn opgetreden en of er daar hulp bij nodig is en wat de planning voor de komende dag is. Op deze manier is iedereen op de hoogte van wie waarmee bezig is en kunnen problemen snel opgelost worden. Bij het NA-C team in Antwerpen maakt men hierbij ook gebruik van het agile dashboard van JIRA, waarbij gevisualiseerd wordt wie waarmee bezig is (zie Figuur \label{jira}). Indien iemand ergens problemen mee heeft, doet men aan pair-programming, waarbij men bij elkaar gaat zitten en samen nadenken over hoe het desbetreffende probleem opgelost kan worden en dit ook samen uit te werken.\\
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{CaptureJira.png}
+\caption{Het JIRA dashboard van het NA-C team in Antwerpen.} 
+\label{jira}
+\end{figure}
+
 In het NA-C team heeft men sprints van twee weken, wat wil zeggen dat men elke twee weken een evaluatie doet van het werk dat in de afgelopen twee weken verzet is en waarbij eventueel demo's gegeven worden van wat er gerealiseerd is (sprint review). Samen met het einde van de sprint is er de sprint retrospective, waarbij men gaat oplijsten wat er goed en minder goed is gegaan, welke problemen er (binnen het team) waren en hoe deze opgelost kunnen worden. Aan het begin van een sprint is er dan de sprint planning, waarin er bekeken wordt wat er moet gebeuren met welke prioriteit en wie wat gaat doen (heel algemeen). Men maakt hierbij gebruik van user-stories, die een bepaalde taak omschrijven en de subtaken ervan. Het beschrijft wat de gebruiker nodig heeft bij het uitvoeren van zijn taak en bepalen zodus wat er moet ontwikkeld worden om de gebruiker hierbij te helpen. Het omschrijft het "wie", "wat" en "waarom" van deze vereisten op hoog niveau.
 \subsubsection{Continuous integration}
 Aangezien er regelmatig releases van software zijn, doet men aan continuous integration, wat inhoudt dat wanneer iemand klaar is met het schrijven van een stuk code en deze commit, alle builds en testen hierrond automatisch zullen runnen zodat fouten in een vroeg stadium kunnen gevonden en opgelost worden.\\
 In Antwerpen maakt men gebruik van Jenkins\footnote{https://jenkins-ci.org/}, een open-source continuous integration systeem. Jenkins heeft een dashboard dat een overzicht toont van alle builds, maar je kan ook filteren op zelfgemaakte criteria, zodat je enkel de status van bepaalde builds ziet. Het overzicht toont een gekleurde bol om aan te geven of de laatste build geslaagt (groen/blauw) of gefaald is. Als er testen gefaald zijn, dan zal de bol geel kleuren.\\
-Er is ook een weerbericht dat toont hoe stabiel de build is, waarbij slecht weer duidt op een instabiele build en goed weer op een satbiele build. \todo{foto van toevoegen} \\
-Het probleem met dit dashboard is dat het niet echt overzichtelijk is. De kleur van de bollen trekt wel de aandacht, maar als je wil zien over welke build het gaat, is dit niet leesbaar, tenzij je je vlak voor het scherm bevindt. Het Jenkins dashboard wordt op de werkvloer weergegeven op een grote televisie, maar men heeft niet de neiging hiernaar te kijken tijdens de uren, waardoor gefaalde builds enkel maar zichtbaar worden voor het team wanneer ze zelf Jenkins openen op hun PC of tijdens de stand-up. \todo{Foto invoegen, getrokken op 29072015 1418} 
+Er is ook een weerbericht dat toont hoe stabiel de build is, waarbij slecht weer duidt op een instabiele build en goed weer op een stabiele build. Een screenshot van dit dashboard is te zien in Figuur \ref{jenkins}.
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{CaptureJenkins.png}
+\caption{Het Jenkins dashboard, zoals origineel gebruikt op de afdeling NA-C in Antwerpen.} 
+\label{jenkins}
+\end{figure}
 
--scrum
--agile
--> jenkins: continuous integration
+Het probleem met dit dashboard is dat het niet echt overzichtelijk is. De kleur van de bollen trekt wel de aandacht, maar als je wil zien over welke build het gaat, is dit niet leesbaar, tenzij je je vlak voor het scherm bevindt. Het Jenkins dashboard wordt op de werkvloer weergegeven op een grote televisie, maar men heeft niet de neiging hiernaar te kijken tijdens de uren, waardoor gefaalde builds enkel maar zichtbaar worden voor het team wanneer ze zelf Jenkins openen op hun PC of tijdens de stand-up. Zoals op Figuur \ref{tv_1} te zien is, moet je zelfs als je voor het dashboard staat goed kijken waar de build staat waarin je ge\"interesseerd bent.
 
--zelf ook: jira en conlfuence -> link ernaartoe!
--erg betrokken: standup meetings, sprint meeting, planning meeting, demo (Zelf een moeten geven)
--behulpzaam team (onderling, ook voor mij)
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{tvdashboardoriginal.jpg}
+\caption{Het originele Jenkins dashboard weergegeven op de televisie op de afdeling van NA-C in Antwerpen.} 
+\label{tv_1}
+\end{figure}
+
 \subsection{Stage-opdracht}
 Mijn stage-opdracht bestond erin om Jenkins awareness te cre\"eren aan de hand van een dashboard dat een beter overzicht toont.
 Als fouten meer in het oog springen, kunnen ze nog sneller verholpen worden en is er meer sprake van continuous integration. \todo{lame zin, maak beter!} Gedurende heel mijn stage werd ik enorm betrokken bij alles wat het team deed; zo deed ik dagelijks mee aan de stand-up meetings en werd ik meegevraagd in de sprint planning, sprint review en de retrospective, om zo een idee te krijgen hoe het er in een bedrijf aan toe gaat. Ook al kon ik niet meteen volgen waar ze het over hadden, het heeft me enorm veel bijgeleerd over hoe deze manier van werken het team sterker kan maken gezien iedereen (bijna) dagelijks updates krijgt over wie waarmee bezig is en de korte evaluatieperiodes ervoor zorgen dat er kort op de bal gespeeld kan worden.\\
@@ -135,21 +150,27 @@ De verschillende bestanden worden als volgt gebruikt:
 \paragraph{Sprint Review} Op het einde van de tweede sprint werd mij gevraagd om de eerste versie van het dashboard te demonstreren voor het team in Antwerpen, Bangalor en Chennai. Ik kon een werkend dashboard tonen dat informatie toonde over de Jenkins build jobs die op mijn lokale server draaiden. Er waren geen opmerkingen of vragen.\todo{beetje droog, beter maken?}
 \subsubsection{Sprint 3: Feedback en verbetering}
 \label{sprint3}
-Na de sprint review heb ik de Alcatel-Lucent Jenkins-server ge\"integreerd in het dashboard, wat nog anderhalve dag van debugging vroeg, gezien de Jenkins-server nu niet lokaal runde, maar op een andere server. Na de sprint retrospective van sprint 2 en de sprint planning van sprint 3 heb ik nog een enqu\^ete gedaan om positieve en negatieve puntjes te verzamelen waar men bij de voorstelling van het dashboard tijdens de demo misschien niet was opgekomen. De resultaten van deze enq\^ete zijn te vinden in de annex.\todo{verwijzing toevoegen}
+Na de sprint review heb ik de Alcatel-Lucent Jenkins-server ge\"integreerd in het dashboard, wat nog anderhalve dag van debugging vroeg, gezien de Jenkins-server nu niet lokaal runde, maar op een andere server. Ook gebruikt men op Alcatel-Lucent een andere versie van Jenkins, waardoor bepaalde sleutelwoorden waarop geparset wordt anders heten.\\
+Na de sprint retrospective van sprint 2 en de sprint planning van sprint 3 heb ik nog een enqu\^ete gedaan om positieve en negatieve puntjes te verzamelen waar men bij de voorstelling van het dashboard tijdens de demo misschien niet was opgekomen. De resultaten van deze enq\^ete zijn te vinden in de annex.\todo{verwijzing toevoegen}
 \subsection{Resultaat}
-De eerste versie van het dashboard is te zien in Figuur \ref{dash_1}.
+De eerste versie van het dashboard is te zien in Figuur \ref{dash_1}. Het dashboard in zijn huidige vorm is gemaakt om getoond te worden op een HD-televisie met 16:9 ratio. Het is de bedoeling dat er zes tegels naast elkaar kunnen staan en dat er drie rijen zijn, wat maakt dat de status van 18 build jobs gelijktijdig getoond kunnen worden. Dit bleek ruim voldoende voor het NA-C team, aangezien er altijd maar op enkele builds tegelijkertijd gefocust wordt.
+
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=90mm]{dashboard_screenshot1.png}
-\caption{Gedetailleerd overzicht dashboard}. 
+\caption{Gedetailleerd overzicht dashboard.} 
 \label{dash_1}
 \end{figure}
 
 Figuur \ref{dash_2} toont de tegels in meer detail. De titel is de naam van de build waarover de tegel informatie verschaft. Het weerbericht toont de stabiliteit van de build, of, indien er testen gefaald zijn, de stabiliteit van de testen, de tekst eronder geeft aan hoe stabiel de builds/testen zijn, de meter geeft aan hoe ver de build is in zijn vooruitgang en de timestamp daaronder toont wanneer de laatste build uitgevoerd is.
- Er zijn verschillende achtergrondkleuren gebruikt:
+Er zijn verschillende achtergrondkleuren gebruikt, die de status van de laatste build weergeven:
 \begin{itemize}
 \item Grijs: de build is nog bezig, het weerbericht toont de stabiliteit van de builds voor degene die nu bezig is.
+\item Rood: de laatste build is gefaald.
+\item Geel: \'e\'en of meerdere testen zijn gefaald.
+\item Groen: alle builds zijn geslaagd en alle tests zijn geslaagd. 
 \end{itemize}
+Als er gekeken wordt naar het voorstel in de literatuurstudie, is de achtergrondkleur niet aanwezig (wel met een gekleurde bol), maar de rondvraagd op de afdeling toonde dat iedereen te vinden was voor de gekleurde achtergrond.
 
 \begin{figure}[ht!]
 \centering
@@ -159,13 +180,32 @@ Figuur \ref{dash_2} toont de tegels in meer detail. De titel is de naam van de b
 \end{figure}
 
 \subsection{Initiatieven voor interns}
-bijeenkomsten: samen lunchen, infosessie over ALU Labs, gesprek met Joeri
+Alcatel-Lucent organiseerde deze zomer een initiatief om alle interns met elkaar in contact te brengen tijdens speciale info-events en meetings. Op deze manier konden interns van verschillende afdelingen met elkaar bespreken hoe de stage op hun afdeling verloopt en zo ervaringen met elkaar uitwisselen. Er zijn verschillende contactmomenten georganiseerd, meestal tijdens de middagpauze, waarbij er geluncht werd, er was een gesprek met bijeenkomsten: samen lunchen, infosessie over ALU Labs, gesprek met Joeri Veldeman, begonnen als doctor in de \textit{electrical engineering} bij Alcatel en nu hoofd van de afdeling van human resources. Zijn ongewone carri\`erepad werd ons uitgelegd en hij heeft informeel met ons gepraat over ons verdere studietrajecten.\\
+Verder is er ook een infosessie geweest over ALU Labs, waarin enkele van de zaken aan bod kwamen waarin Alcatel-Lucent investeert en research bij uitvoert.\\
+Dit alles maakte dat de stage niet alleen een verrijking van mijn kennis binnen de afdeling werd, maar ook daarbuiten, met nieuwe contacten tot gevolg.\todo{anders schrijven}
+
 \section{Relatie stage en opleiding}
--scrum: swop
--pair programming: swop
--zelf project plannen en uitwerken, met tussentijdse evaluaties \~ P\&O
--documentatie: ogp
+Het doel van de stage was om een dashboard te maken zodat de build status van de verschillende onderdelen van projecten overzichtelijk getoond konden worden. Binnen deze stage werd ik bovendien ook betrokken bij alle bijeenkomsten met het team, om zo te ervaren hoe het er in een werkomgeving aan toe gaat. Op deze manier heb ik extra facetten gezien die tijdens de opleiding aan bod zijn gekomen, die ik niet had gezien moest ik niet betrokken geweest zijn bij alles. Zo werkt men hier volgens de agile-methode scrum, met elke dag standup meetings en tweewekelijkse sprints. Dit is iets dat in de lessen van Software-Ontwerp kort aan bod was gekomen, waarvan ik tijdens de stage zag dat het echt zijn nut heeft. De korte sprints en regelmatige reviews zorgen ervoor dat problemen niet te lang kunnen blijven bestaan en door de continuous integration zijn mergefouten snel opgespoord en opgelost. Zelf kreeg ik ook eigen project, waardoor ik ook met sprints werkte en zo "kleine" doelen voor ogen had. Deze manier van werken is vergelijkbaar met die tijdens de P\&O-sessies tijdens de bachelorproef, waarbij we om de paar weken een bepaalde functionaliteit moesten kunnen demonstreren. Op de afdeling NA-C doet men ook regelmatig aan pair-programming, iets wat ook aangeraden was in de sessies van Software-Ontwerp. Aangezien ik aan een eigen project moest werken, heb ik dit niet zo vaak gedaan, maar als ik met vragen zat, kwamen collega's met plezier samen met mij zoeken.\\
+Het dashboard dat ik moest maken moest niet een kant-en-klaar dashboard zijn dat ik gebruikte, waar ik dan zelf info aan toevoegde, maar een waarbij ik zelf moest nadenken over het design en de implementatie van de code om het dashboard te realiseren. Ik maakte gebruik van een bestaand framework, maar heb zelf nog heel veel van de code moeten schrijven. Dit heeft me er meer dan eens attent op gemaakt hoe belangrijk goede documentatie is, iets waar tijdens de lessen van Objectgericht Programmeren altijd op gehamerd is, aangezien het framework op zich nauwelijks/niet gedocumenteerd was en ik soms moeite had om te begrijpen wat een bepaalde functie deed. De documentatie op de websites van het framework en de plugins \todo{is dit het juiste woord?} was vaak ook erg kort door de bocht of onvolledig, dus ik heb vaak lang gezocht naar bepaalde zaken.\\
+In de opleiding wordt er altijd gewerkt in kleine groepjes, meestal van twee mensen, maximaal in groepen van zes mensen. Op de afdeling NA-C werkt men in een team van ongeveer 10 mensen, wat het managaen van het team nog moeilijker maakt dan bij een groep van slechts enkele mensen. Toch is er getoond dat dit perfect mogelijk is indien je de juiste tools gebruikt (in dit geval Confluence en JIRA) en indien er genoeg gecommuniceerd wordt.\\
+Tijdens de lessen van Informatica werktuigen zijn Ruby, Linux en LaTeX aan bod gekomen. Ruby bleek nuttig om de Embedded Ruby voor het dashboard te schrijven, waar de kennis van Linux ervoor zorgde dat ik iets vlotter mijn weg vond bij het installeren en werken met Linux, waar het dashboard in is ontwikkeld. LaTeX is gebruikt om de literatuurstudie te maken.\\
+Doordat er in de bachelor informatica al een heel aantal programmeertalen gezien werden, was het aanleren van andere (opmaak)talen veel makkelijker. \\
+Het schrijven van (wetenschappelijke) verslagen was een groot onderdeel tijdens Wetenschapscommunicatie en tijdens P\&O, wat me hielp bij het schrijven van de literatuurstudie en het stageverslag. \todo{te kort, moet nog tekst bijkomen}
+
 \section{Krititsche reflectie competenties}
+\begin{itemize}
+\item Technische competenties die ik hoopte te verbeteren:
+\begin{description}
+\item[Bijleren over version control] Er wordt op de afdeling NA-C gewerkt met Git, waar ik ook tijdens mijn opleiding al mee in aanraking ben gekomen. Zelf heb ik niet echt gebruik gemaakt van Git, hoewel dit zeker nuttig geweest zou zijn bij het schrijven van mijn dashboard. Eens het dashboard klaar was, is het wel op Git gezet, maar dit had dus veel eerder moeten gebeuren.
+\item[Leren werken met Jenkins] Op de afdeling NA-C werkt men met het continuous integration systeem Jenkins, dat builds automatisch runt nadat er een nieuwe versie van de software gecommit is. Tijdens de stage was het duidelijk hoe nuttig dit is: er werd op een gegeven moment een fout gemaakt, die ook nog eens onvoldoende getest bleek, maar men heeft deze heel snel ontdekt en binnen de 2 dagen kunnen oplossen. Moest er gewacht zijn met mergen tot vlak voor de release, was men waarschijnlijk veel meer problemen tegengekomen. Continuous integration is vooral handig in teams met meerdere mensen, het was dus van pas gekomen tijdens P\&O. \todo{dat laatste weglaten?}
+\item[Mij inwerken in een reeds lopend project] Ik moest niet meewerken aan de code van het NA-C team zelf, maar heb mij wel moeten inwerken in de code van het dashboard. Zoals hierboven vermeld, was dit niet altijd makkelijk, maar het heeft er wel voor gezorgd dat ik enorm veel heb bijgeleerd, net omdat ik heel veel zelf moest uitzoeken. Eens de eerste versie van het dashboard klaar was, kende ik de code enorm goed, dus nieuwe veranderingen waren zeer snel gemaakt.
+\end{description}
+\item Persoonlijke competenties die ik hoopte te verbeteren:
+\begin{description}
+\item[Leren werken in grote teams] In het NA-C team in Antwerpen werken er een tiental mensen, in Bangalor en Chennai zijn er teams van gelijkaardige grootte.\todo{navragen!} Doordat er dagelijks een standup meetings was met de mensen van het team in Antwerpen, was iedereen goed op de hoogte van wie wat deed en doordat men met sprints van twee weken werkte, kwamen problemen en pijnpunten snel boven. Dit is iets dat ik zeker meeneem naar projecten in de toekomst toe, ik heb ervaren hoe al deze zaken kunnen helpen in het beter doen verlopen van een project.
+\item[Plannen op lange termijn] Aan het begin van mijn stage werd me meteen gezegd dat ik redelijk vrij gelaten ging worden in mijn planning, maar er werd wel gevraagd om er een op te stellen, zodat ik ook in sprints kon werken. Ik heb zelf voorstellen mogen doen en aan mijn eigen tempo (maar toch binnen de termijnen van de sprints) kunnen werken. Als er grote dingen te doen stonden, plande ik daar altijd genoeg tijd voor in, zodat ik uiteindelijk "te vroeg" klaar was en aan verbeteringen kon werken. Dit is een van de competenties die ik zowel in het tweede semester van mijn laatste bachelorjaar heb aangescherpt, als nu op de stage.  
+\end{description}
+\end{itemize}
 
 \section{Conclusie}
 
