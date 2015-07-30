@@ -4,6 +4,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{todonotes}
+\usepackage{graphicx}
 
 \begin{document}
 
@@ -103,7 +104,7 @@ De derde en laatste sprint bestond uit het voorstellen van de eerste versie van 
 
 \subsubsection{Sprint 1: Onderzoek en literatuurstudie} 
 \label{sprint1}
-\paragraph{Literatuurstudie} Tijdens de eerste sprint heb ik onderzoek gevoerd naar hoe goede dashboards eruit zien en hoe je ze overzichtelijk kan houden. Hierrond heb ik een literatuurstudie gemaakt, die gevonden kan worden in de annex. \todo{anders verwoorden?} Uit deze literatuurstudie bleek inderdaad dat het voorziene Jenkins dashboard niet voldeed aan veel van de vereisten, aangezien je niet in \'e\'en oogopslag de belangrijkste info kan vergaren.\\
+\paragraph{Literatuurstudie} Tijdens de eerste sprint heb ik onderzoek gevoerd naar hoe goede dashboards eruit zien en hoe je ze overzichtelijk kan houden. Hierrond heb ik een literatuurstudie gemaakt, die gevonden kan worden in de annex. \todo{anders verwoorden?} \todo{verwijzing} Uit deze literatuurstudie bleek inderdaad dat het voorziene Jenkins dashboard niet voldeed aan veel van de vereisten, aangezien je niet in \'e\'en oogopslag de belangrijkste info kan vergaren.\\
 Naast de literatuurstudie heb ik ook gezocht naar tools om dashboards te maken, waarbij ik van een collega op de afdeling de aanbeveling kreeg om Dashing\footnote{http://dashing.io/} te gebruiken, waarbij hij ook een demo gaf. \todo{laatste deel zin weg?} Na het bekijken van nog enkele andere tools om dashboards te ontwikkelen, heb ik uiteindelijk voor Dashing gekozen, aangezien het enorm veel flexibiliteit biedt (je kan het dashboard helemaal inrichten zoals je wilt), \todo{deel tussen haakjes weg?} zodat ik het dashboard helemaal zou kunnen maken zoals ik het in gedachten had. \todo{anders verwoorden?}
 \paragraph{Enqu\^ete}
 Na het onderzoek en de literatuurstudie, heb ik een voorstel voor dashboardontwerpen gemaakt en deze voorgelegd aan de mensen bij NA-C. Ik liet hen hierbij een kleine enqu\^ete invullen waarbij ze konden kiezen voor verschillende designs en ook opmerkingen geven. Uit die opmerkingen zijn nog nuttige commentaren gekomen, bijvoorbeeld dat het tijdstip van de laatste build ook best getoond kan worden. De enqu\^ete en de resultatentabel zijn ook te vinden in de annex. \todo{referentie ernaar}
@@ -125,16 +126,40 @@ Het schrijven van het dashboard werd gedaan in verschillende talen, hieronder ee
 \item[JSON] JSON werd gebruikt om de data uit van de Jenkins server te parsen, zodat deze opgevraagd kon worden in de Ruby-file.
 \end{description}
 Omdat geen van deze talen me helemaal eigen was, heb ik enkele dagen genomen om de basics te leren via Codecademy\footnote{https://www.codecademy.com/}. Dit was voldoende om me op weg te zetten om zelf verder te experimenteren. \todo{dat laatste mss weglaten?}
-Een widget wordt opgesteld door middel van een .HTML-file, een .SCSS-file en een .coffee-file.\todo{waar dit zetten?}
-html, (s)css, coffeescript, Sinatra(ruby), javascript (batman bindings), jquery
+De verschillende bestanden worden als volgt gebruikt:
+\begin{itemize}
+\item Een widget wordt opgesteld door middel van een .HTML-file, een .SCSS-file en een .coffee-file.
+\item Een Embedded Ruby file geeft via HTML-blocks\todo{anders verwoorden?} aan welke build jobs getoond worden op het dashboard.
+\item Een andere Embedded Ruby file doet de mapping van de JSON data op de variabelen in het dashboard en defini\"eert de namen van de build jobs die getoond kunnen worden.
+\end{itemize}
+\paragraph{Sprint Review} Op het einde van de tweede sprint werd mij gevraagd om de eerste versie van het dashboard te demonstreren voor het team in Antwerpen, Bangalor en Chennai. Ik kon een werkend dashboard tonen dat informatie toonde over de Jenkins build jobs die op mijn lokale server draaiden. Er waren geen opmerkingen of vragen.\todo{beetje droog, beter maken?}
 \subsubsection{Sprint 3: Feedback en verbetering}
 \label{sprint3}
-vermelden dat demo gedaan tijdens sprint 2 (naar einde toe), zo (positieve) reacties gekregen en over gepraat. tijdens sprint 3 dan demo gegeven op tv, bevraging gedaan: wat goed/slecht
-Derde: feedback krijgen (Demo! zowel voor antwerpen, bangalor als chennai, maar ook binnen het team zelf feedback vragen)
+Na de sprint review heb ik de Alcatel-Lucent Jenkins-server ge\"integreerd in het dashboard, wat nog anderhalve dag van debugging vroeg, gezien de Jenkins-server nu niet lokaal runde, maar op een andere server. Na de sprint retrospective van sprint 2 en de sprint planning van sprint 3 heb ik nog een enqu\^ete gedaan om positieve en negatieve puntjes te verzamelen waar men bij de voorstelling van het dashboard tijdens de demo misschien niet was opgekomen. De resultaten van deze enq\^ete zijn te vinden in de annex.\todo{verwijzing toevoegen}
 \subsection{Resultaat}
-\todo{screenshot tonen}
+De eerste versie van het dashboard is te zien in Figuur \ref{dash_1}.
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{dashboard_screenshot1.png}
+\caption{Gedetailleerd overzicht dashboard}. 
+\label{dash_1}
+\end{figure}
+
+Figuur \ref{dash_2} toont de tegels in meer detail. De titel is de naam van de build waarover de tegel informatie verschaft. Het weerbericht toont de stabiliteit van de build, of, indien er testen gefaald zijn, de stabiliteit van de testen, de tekst eronder geeft aan hoe stabiel de builds/testen zijn, de meter geeft aan hoe ver de build is in zijn vooruitgang en de timestamp daaronder toont wanneer de laatste build uitgevoerd is.
+ Er zijn verschillende achtergrondkleuren gebruikt:
+\begin{itemize}
+\item Grijs: de build is nog bezig, het weerbericht toont de stabiliteit van de builds voor degene die nu bezig is.
+\end{itemize}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{screenshot2.png}
+\caption{Eerste versie van het dashboard.} 
+\label{dash_2}
+\end{figure}
+
 \subsection{Initiatieven voor interns}
-bijeenkomsten: samen lunchen, infosessie over Alcatel, gesprek met Joeri
+bijeenkomsten: samen lunchen, infosessie over ALU Labs, gesprek met Joeri
 \section{Relatie stage en opleiding}
 -scrum: swop
 -pair programming: swop
