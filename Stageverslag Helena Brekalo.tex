@@ -33,6 +33,7 @@ Helena \textsc{Brekalo}\\[3cm]
 
 \end{titlepage}
 
+\textbf{Gegevens student:}
 Helena Brekalo\\
 1e master Computerwetenschappen (Veilige software)\\
 \medskip
@@ -56,22 +57,37 @@ Vast nummer binnen het bedrijf: +32 3 240 8525
 \clearpage
 
 \begin{center}
-\textbf{Abstract}
-
+\textbf{Samenvatting}\\
 \end{center}
+Dit verslag beschrijft de opgedane kennis en ervaring tijdens mijn 6 weken durende stage bij Alcatel-Lucent in Antwerpen. Het doel tijdens de stage was om een dashboard te ontwerpen en implementeren voor het continuous integration systeem Jenkins en op deze manier "Jenkins-awareness" te cre\"eren.\\
+Het dashboard is ontwikkeld met Dashing en toont het overzicht van een reeks zelfgekozen builds. De ontwikkeling is gebeurd in Javascript, Coffeescript, SCSS, Ruby en HTML.\\
+Gedurende de stage werd ik erg betrokken bij alle onderdelen van het scrum-proces, zodat ik me een beeld kon vormen van hoe dit er in het bedrijfsleven aan toe gaat.
 \tableofcontents
 \clearpage
 
+\section{Inleiding}
+De probleemstelling, waarvoor ik tijdens mijn stage een oplossing ontworpen heb, gaat als volgt. Op de afdeling Motive Network-Analyzer Copper (NA-C) bij Alcatel-Lucent in Antwerpen doet men aan continuous integration, waarbij men gebruik maakt van de tool Jenkins. Deze biedt een dashboard om het overzicht van de build statussen weer te geven, maar de software-ontwikkelaars hebben niet de neiging deze te bekijken op de televisie die aanwezig is. Het doel van mijn stage was om "Jenkins-awareness" te cre\"eren en een dashboard te ontwikkelen dat snel een overzicht toont van de builds waar aandacht aan besteed moeten worden. Op de afdeling NA-C werkt men volgens het agile-principe van scrum, waar ik zelf ook gebruik van maakte. Zo kreeg ik mijn eigen project toegewezen en moest ik tweewekelijkse sprints inplannen en evaluaties uitvoeren.\\
+
+Om dit te realiseren, heb ik tijdens de eerste sprint een literatuurstudie uitgevoerd, om zo een idee te vormen van hoe het dashboard eruit moet zien. Tijdens de tweede sprint is het dashboard ontwikkeld, met behulp van Dashing. Aan het einde van de tweede sprint is deze ge\"evalueerd door middel van een demonstratie voor de teams in Antwerpen, Chennai en Bangalor. Op basis van de feedback die hierop ontvangen werd, zijn veranderingen doorgevoerd gedurende de derde sprint. In het tweede deel van de derde sprint is het dashboard in gebruik genomen op de Jenkins server van NA-C.\\
+
+De voornaamste resultaten zijn het dashboard dat succesvol ontwikkeld is, door te werken via de scrum-methode. De talen die ik hierbij heb geleerd zijn Javascript, Coffeescript, (S)CSS, HTML en Ruby. Het dashboard is nu ook voorzien van documentatie, om hergebruik te vergemakkelijken. Doordat ik overal in betrokken werd, heb ik nu ook een idee van hoe grote projecten verlopen in een bedrijfsomgeving.\\
+
+Dit verslag is als volgt ingedeeld. In Sectie \ref{bedrijf} wordt het bedrijf Alcatel-Lucent voorgesteld. De tweede sectie behandelt de stage (Sectie \ref{stage}), waarin de afdeling waar ik gewerkt heb wordt voorgesteld (Subsectie \ref{afdeling}), er wordt uitgelegd volens welke methoden er wordt gewerkt (Subsectie \ref{methoden}). Mijn stageopdracht wordt uitgelegd in Subsectie \ref{opdracht}. Het resultaat wordt besproken in Subsectie \ref{resultaat}. Gedurende mijn stage waren er ook initiatieven voor interns, wat besproken wordt in Subsectie \ref{interns}.\\
+Sectie \ref{relatie} legt de link tussen de stage en mijn opleiding. De kritische reflectie van de competenties die ik trachtte te verbeteren is te vinden in Sectie \ref{reflectie}. Sectie \ref{besluit} bevat het besluit en de annex is te vinden in Sectie \ref{annex}.
+
 \section{Het bedrijf: Alcatel-Lucent}
-Alcatel-Lucent is een Frans bedrijf met de hoofdzetel in Frankrijk en vestigingen in Amerika, Azi\"e, Europa (met dus onder andere een vestiging in Antwerpen), het Midden-Oosten \\todo{hoofdletters?} en Afrika. Alcatel kent een lange historie van overnames, met de meest recente overname die door Nokia, begin 2015.\\
+\label{bedrijf}
+Alcatel-Lucent is een Frans bedrijf met de hoofdzetel in Frankrijk en vestigingen in Amerika, Azi\"e, Europa (met dus onder andere een vestiging in Antwerpen), het Midden-Oosten en Afrika. Alcatel kent een lange historie van overnames, met de meest recente overname die door Nokia, begin 2015.\\
 De eerste funderingen van Alcatel werden gelegd in 1869, met de opstart van Gray and Barton in Cleveland, Ohio. Een tien jaar later worden ze overgenomen door American Bell, wat in 1925 leidt tot het ontstaan van Bell Telephone Laboratories. In deze "Bell Labs" worden verschillende grote ontwikkelingen verwezenlijkt, waaronder de eerste lange afstandstelevisietransmissie en de uitvinding van de batterij op zonne-energie. \todo{beter schrijven!} In 1984 worden ze overgenomen door C\^ables de Lyon en worden ze een Frans bedrijf. In 2006 mergen Alcatel en het Amerikaanse Lucent Technologies, waarop de naam verandert naar Alcatel-Lucent. In 2015 werd Alcatel-Lucent overgenomen door Nokia, wat effectief zal worden in april 2016. Door deze overname zal Nokia het tweede grootste bedrijf in wireless zijn, op Ericsson na. Op deze manier wordt de concurrentie met het Chinese Huawei vergroot op het gebied van draadloze communicatietechnologie.\\
 Alcatel-Lucent heeft verschillende afdelingen, zijnde het \textit{core networking segment}, wat IP routing, transport en platforms omvat en het \textit{access segment}, wat wireless en fixed access omvat, alsook licensing en \textit{managed services}. In Antwerpen wordt er aan al deze segmenten gewerkt; zelf werd ik tewerkgesteld in de fixed access afdeling, namelijk Motive Network Analyzer-Copper (Motive NA-C). Zij staan ervoor in om het gebruik van het kopernetwerk te optimaliseren en fouten te detecteren en verhelpen.\\ \todo{nog tekst toevoegen?}
 
-
 \section{Stage}
+\label{stage}
 \subsection{Afdeling: Motive NA}
+\label{afdeling}
 De stage ging door op de afdeling Motive Network Analyzer - Copper (NA-C) bij het team dat ook onder begeleiding staat van mijn stagebegeleider Bart Hemmeryckx-Deleersnijder. Motive NA-C heeft een team in Antwerpen, Chennai en Bangalor, waarbij de development voornamelijk in Antwerpen gebeurt en het testen in Chennai en Bangalor. Er zijn altijd ook enkele testers van Chennai en Bangalor in Antwerpen, om zo de communicatie tussen de teams te verbeteren en de samenwerking te vergemakkelijken.
 \subsection{Werkmethoden}
+\label{methoden}
 \subsubsection{Scrum}
 Het team van Bart werkt volgens de scrum-methode, zoals kort was aangehaald tijdens de hoorcollege's van Software-Ontwerp. Scrum is een voorbeeld van een agile werkmethode, waarbij men ervan uitgaat dat de vereisten voor het project kunnen en zullen veranderen gedurende het project. 
 Bij het klassieke watervalmodel stelt men eerst de vereisten op, om deze vervolgens te implementeren, dit te evalueren en dan te onderhouden. Het probleem hierbij is dat de communicatie tussen de klant en het bedrijf 
@@ -110,6 +126,7 @@ Het probleem met dit dashboard is dat het niet echt overzichtelijk is. De kleur 
 \end{figure}
 
 \subsection{Stage-opdracht}
+\label{opdracht}
 Mijn stage-opdracht bestond erin om Jenkins awareness te cre\"eren aan de hand van een dashboard dat een beter overzicht toont.
 Als fouten meer in het oog springen, kunnen ze nog sneller verholpen worden en is er meer sprake van continuous integration. \todo{lame zin, maak beter!} Gedurende heel mijn stage werd ik enorm betrokken bij alles wat het team deed; zo deed ik dagelijks mee aan de stand-up meetings en werd ik meegevraagd in de sprint planning, sprint review en de retrospective, om zo een idee te krijgen hoe het er in een bedrijf aan toe gaat. Ook al kon ik niet meteen volgen waar ze het over hadden, het heeft me enorm veel bijgeleerd over hoe deze manier van werken het team sterker kan maken gezien iedereen (bijna) dagelijks updates krijgt over wie waarmee bezig is en de korte evaluatieperiodes ervoor zorgen dat er kort op de bal gespeeld kan worden.\\
 Er werd voor gezorgd dat ik mijn eigen project kreeg, waarbij er dan ook tweewekelijkse sprints gepland werden, zodat ik een idee kreeg van hoe het eraan toe gaat. Er werd voor mij een JIRA-pagina aangemaakt, waarop ik mijn vooruitgang kon bijhouden door taken aan te maken die ik wou doen en problemen kon rapporteren. Een screenshot van mijn JIRA-dashboard is te zien in Figuur \ref{my_jira}.
@@ -120,7 +137,7 @@ De derde en laatste sprint bestond uit het voorstellen van de eerste versie van 
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=90mm]{myJIRAscreenshot.png}
-\caption{Het JIRA-dashboard voor mijn internship.} 
+\caption{Het JIRA-dashboard voor mijn stage.} 
 \label{my_jira}
 \end{figure}
 
@@ -161,6 +178,7 @@ Na de sprint review heb ik de Alcatel-Lucent Jenkins-server ge\"integreerd in he
 Na de sprint retrospective van sprint 2 en de sprint planning van sprint 3 heb ik nog een enqu\^ete gedaan om positieve en negatieve puntjes te verzamelen waar men bij de voorstelling van het dashboard tijdens de demo misschien niet was opgekomen. De resultaten van deze enq\^ete zijn te vinden in de annex.\todo{verwijzing toevoegen}
 \paragraph{Ingebruikname} \todo{over vertellen}
 \subsection{Resultaat}
+\label{resultaat}
 De eerste versie van het dashboard is te zien in Figuur \ref{dash_1}. Het dashboard in zijn huidige vorm is gemaakt om getoond te worden op een HD-televisie met 16:9 ratio. Het is de bedoeling dat er zes tegels naast elkaar kunnen staan en dat er drie rijen zijn, wat maakt dat de status van 18 build jobs gelijktijdig getoond kunnen worden. Dit bleek ruim voldoende voor het NA-C team, aangezien er altijd maar op enkele builds tegelijkertijd gefocust wordt.\todo{Indien er een definitieve (dwz veranderde) versie is, praat erover!}
 
 \begin{figure}[ht!]
@@ -188,11 +206,13 @@ Als er gekeken wordt naar het voorstel in de literatuurstudie, is de achtergrond
 \end{figure}
 
 \subsection{Initiatieven voor interns}
+\label{interns}
 Alcatel-Lucent organiseerde deze zomer een initiatief om alle interns met elkaar in contact te brengen tijdens speciale info-events en meetings. Op deze manier konden interns van verschillende afdelingen met elkaar bespreken hoe de stage op hun afdeling verloopt en zo ervaringen met elkaar uitwisselen. Er zijn verschillende contactmomenten georganiseerd, meestal tijdens de middagpauze, waarbij er geluncht werd, er was een gesprek met bijeenkomsten: samen lunchen, infosessie over ALU Labs, gesprek met Joeri Veldeman, begonnen als doctor in de \textit{electrical engineering} bij Alcatel en nu hoofd van de afdeling van human resources. Zijn ongewone carri\`erepad werd ons uitgelegd en hij heeft informeel met ons gepraat over ons verdere studietrajecten.\\
 Verder is er ook een infosessie geweest over ALU Labs, waarin enkele van de zaken aan bod kwamen waarin Alcatel-Lucent investeert en research bij uitvoert.\\
 Dit alles maakte dat de stage niet alleen een verrijking van mijn kennis binnen de afdeling werd, maar ook daarbuiten, met nieuwe contacten tot gevolg.\todo{anders schrijven}
 
 \section{Relatie stage en opleiding}
+\label{relatie}
 Het doel van de stage was om een dashboard te maken zodat de build status van de verschillende onderdelen van projecten overzichtelijk getoond konden worden. Binnen deze stage werd ik bovendien ook betrokken bij alle bijeenkomsten met het team, om zo te ervaren hoe het er in een werkomgeving aan toe gaat. Op deze manier heb ik extra facetten gezien die tijdens de opleiding aan bod zijn gekomen, die ik niet had gezien moest ik niet betrokken geweest zijn bij alles. Zo werkt men hier volgens de agile-methode scrum, met elke dag standup meetings en tweewekelijkse sprints. Dit is iets dat in de lessen van Software-Ontwerp kort aan bod was gekomen, waarvan ik tijdens de stage zag dat het echt zijn nut heeft. De korte sprints en regelmatige reviews zorgen ervoor dat problemen niet te lang kunnen blijven bestaan en door de continuous integration zijn mergefouten snel opgespoord en opgelost. Zelf kreeg ik ook eigen project, waardoor ik ook met sprints werkte en zo "kleine" doelen voor ogen had. Deze manier van werken is vergelijkbaar met die tijdens de P\&O-sessies tijdens de bachelorproef, waarbij we om de paar weken een bepaalde functionaliteit moesten kunnen demonstreren. Op de afdeling NA-C doet men ook regelmatig aan pair-programming, iets wat ook aangeraden was in de sessies van Software-Ontwerp. Aangezien ik aan een eigen project moest werken, heb ik dit niet zo vaak gedaan, maar als ik met vragen zat, kwamen collega's met plezier samen met mij zoeken.\\
 Het dashboard dat ik moest maken moest niet een kant-en-klaar dashboard zijn dat ik gebruikte, waar ik dan zelf info aan toevoegde, maar een waarbij ik zelf moest nadenken over het design en de implementatie van de code om het dashboard te realiseren. Ik maakte gebruik van een bestaand framework, maar heb zelf nog heel veel van de code moeten schrijven. Dit heeft me er meer dan eens attent op gemaakt hoe belangrijk goede documentatie is, iets waar tijdens de lessen van Objectgericht Programmeren altijd op gehamerd is, aangezien het framework op zich nauwelijks/niet gedocumenteerd was en ik soms moeite had om te begrijpen wat een bepaalde functie deed. De documentatie op de websites van het framework en de plugins \todo{is dit het juiste woord?} was vaak ook erg kort door de bocht of onvolledig, dus ik heb vaak lang gezocht naar bepaalde zaken. Omdat ik het zelf zo erg miste, heb ik zelf documentatie geschreven, in de hoop dat het voor een eventuele opvolger makkelijker is om alles te begrijpen.\\
 In de opleiding wordt er altijd gewerkt in kleine groepjes, meestal van twee mensen, maximaal in groepen van zes mensen. Op de afdeling NA-C werkt men in een team van ongeveer 10 mensen, wat het managaen van het team nog moeilijker maakt dan bij een groep van slechts enkele mensen. Toch is er getoond dat dit perfect mogelijk is indien je de juiste tools gebruikt (in dit geval Confluence en JIRA) en indien er genoeg gecommuniceerd wordt.\\
@@ -201,6 +221,7 @@ Doordat er in de bachelor informatica al een heel aantal programmeertalen gezien
 Het schrijven van (wetenschappelijke) verslagen was een groot onderdeel tijdens Wetenschapscommunicatie en tijdens P\&O, wat me hielp bij het schrijven van de literatuurstudie en het stageverslag. \todo{te kort, moet nog tekst bijkomen}
 
 \section{Krititsche reflectie competenties}
+\label{reflectie}
 \begin{itemize}
 \item Technische competenties die ik hoopte te verbeteren:
 \begin{description}
@@ -216,14 +237,14 @@ Ondanks het te laat beginnen gebruiken van version control, zijn mijn competenti
 \end{description}
 \end{itemize}
 
-\section{Conclusie}
--dashboard gemaakt
--talen bijgeleerd
--geleerd hoe het er in een bedrijf aan toe gaat
--goede begeleiding
--zelfstandig werken
-
+\section{Besluit}
+\label{besluit}
+Mijn stage ging voor 6 weken door bij Alcatel-Lucent in Antwerpen. Er werd mij gevraagd een dashboard te ontwerpen om de build status van het continuous integration systeem Jenkins te tonen.\\
+Het dashboard is succesvol gemaakt binnen de opgelegde tijd met behulp van Dashing, draaiende op een Linux server.\\
+Tijdens de stage heb ik enkele (opmaak)talen bijgeleerd, waaronder Javascript, JQuery, HTML en (S)CSS. Mijn kennis van Ruby kwam hierbij ook van pas.\\
+Onder de goede begeleiding van Bart heb ik grotendeels zelfstandig mijn doelen en het project uitgewerkt en geleerd hoe het er in een bedrijf aan toe gaat.
 
 \section{Annex}
+\label{annex}
 
 \end{document}
