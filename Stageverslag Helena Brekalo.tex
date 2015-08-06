@@ -82,8 +82,8 @@ Om dat te realiseren, is er tijdens de eerste sprint een literatuurstudie uitgev
 
 De voornaamste resultaten zijn het dashboard dat succesvol ontwikkeld is, door te werken via de scrum-methode. De talen die hierbij gebruikt zijn, zijn Javascript, Coffeescript, (S)CSS, HTML en Ruby. Het dashboard is nu ook voorzien van documentatie, om hergebruik te vergemakkelijken.\\
 
-Dit verslag is als volgt ingedeeld. In Sectie \ref{bedrijf} wordt het bedrijf Alcatel-Lucent voorgesteld. De derde sectie behandelt de stage (Sectie \ref{stage}), waarin de afdeling waar de stage doorging wordt voorgesteld (Subsectie \ref{afdeling}), er wordt uitgelegd volens welke methoden er wordt gewerkt (Subsectie \ref{methoden}). De stageopdracht wordt uitgelegd in Subsectie \ref{opdracht}. Het resultaat wordt besproken in Subsectie \ref{resultaat}. Gedurende de stage waren er ook initiatieven voor interns, wat besproken wordt in Subsectie \ref{interns}.\\
-Sectie \ref{relatie} legt de link tussen de stage en de opleiding informatica. De kritische reflectie van de competenties die ik trachtte te verbeteren is te vinden in Sectie \ref{reflectie}. Sectie \ref{besluit} bevat het besluit en de appendices zijn te vinden in Appendix \ref{lit_study}, \ref{enquete1} en \ref{enquete2}. \todo{ref naar andere appendices toevoegen}
+Dit verslag is als volgt ingedeeld. In Sectie \ref{bedrijf} wordt het bedrijf Alcatel-Lucent voorgesteld. De derde sectie behandelt de stage (Sectie \ref{stage}), waarin de afdeling waar de stage doorging wordt voorgesteld (Subsectie \ref{afdeling}), er wordt uitgelegd volens welke methoden er wordt gewerkt (Subsectie \ref{methoden}). De stageopdracht wordt uitgelegd in Subsectie \ref{opdracht}. Het resultaat wordt besproken in Subsectie \ref{resultaat}. Gedurende de stage waren er ook initiatieven voor stagiairs, wat besproken wordt in Subsectie \ref{interns}.\\
+Sectie \ref{relatie} legt de link tussen de stage en de opleiding informatica. De kritische reflectie van de competenties die ik trachtte te verbeteren is te vinden in Sectie \ref{reflectie}. Sectie \ref{besluit} bevat het besluit en de appendices zijn te vinden in Appendix \ref{lit_study}, \ref{enquete1}, \ref{enquete2} en \ref{competenties}. \todo{ref naar andere appendices toevoegen}
 
 \section{Het bedrijf: Alcatel-Lucent}
 \label{bedrijf}
@@ -182,7 +182,7 @@ Na het onderzoek en de literatuurstudie, is er een voorstel voor dashboardontwer
 Op het einde van de eerste sprint vond een \textit{sprint review} en \textit{sprint retrospective} plaats, om de gemaakte vooruitgang te evalueren. Deze meeting werd gecombineerd met de sprint planning, waar een eerste versie van het ontwerp en de tools werden voorgesteld.
 \paragraph{Gebruikte tools}
 Dashing is een dashboard framework dat geschreven is in Sinatra, een open source software web applicatie geschreven in Ruby. De ontwikkeling gebeurde op Linux, waarbij gebruik gemaakt werd van Ubuntu 14.04. Op deze PC is een lokale Jenkins-omgeving opgezet, zodat het dashboard tijdens de ontwikkeling hiermee getest kon worden. Het schrijven van de code gebeurde in gedit en debuggen werd gedaan via de \textit{terminal}.\\
-De "tegels" op het dashboard worden omschreven als \textit{widgets} waarbij je verschillende soorten widgets kan hebben. Tijdens deze fase van het project werd er gefocust op een \textit{widget} om informatie over Jenkins te tonen. Deze \textit{widget} kan gebruikt worden voor verschillende builds, het is niet de bedoeling om voor elke build een nieuw widget te ontwikkelen, tenzij je verschillende informatie wilt tonen op de verschillende Jenkins-widgets. Tijdens de derde sprint is hier nog een widget voor RSS-feeds aan toegevoegd, zodat ook de nieuws headlines \todo{juist woord zoeken} gevolgd kunnen worden.
+De "tegels" op het dashboard worden omschreven als \textit{widgets} waarbij je verschillende soorten widgets kan hebben. Tijdens deze fase van het project werd er gefocust op een \textit{widget} om informatie over Jenkins te tonen. Deze \textit{widget} kan gebruikt worden voor verschillende builds, het is niet de bedoeling om voor elke build een nieuw widget te ontwikkelen, tenzij je verschillende informatie wilt tonen op de verschillende Jenkins-widgets. Tijdens de derde sprint is hier nog een widget voor RSS-feeds aan toegevoegd, zodat ook het meest recente nieuws gevolgd kan worden.
 \paragraph{Gebruikte talen}
 Het schrijven van het dashboard is gebeurd in verschillende talen, hieronder een opsomming welke taal gebruikt werden.
 \begin{description}
@@ -206,10 +206,11 @@ De verschillende bestanden worden als volgt gebruikt:
 \label{sprint3}
 Na de sprint review is de Alcatel-Lucent Jenkins-server ge\"integreerd in het dashboard, wat nog anderhalve dag van debugging vroeg, gezien de Jenkins-server nu niet lokaal runde, maar op een andere server. Ook gebruikt men bij Alcatel-Lucent een andere versie van Jenkins, waardoor bepaalde sleutelwoorden waarop geparset wordt anders heten.\\
 Na de sprint retrospective van sprint 2 en de sprint planning van sprint 3 is er nog een enqu\^ete uitgevoerd om positieve en negatieve commentaren te verzamelen waar men bij de voorstelling van het dashboard tijdens de demo misschien niet was opgekomen. De resultaten van deze enq\^ete zijn te vinden in appendix \ref{enquete2}.
-Een van de uitbreidingen die zijn gemaakt, is het tonen van een RSS-feed dat nieuws weergeeft. Ook is het dashboard aangepast zodat de meter van de build status verdwijnt wanneer de build compleet is.
+Een van de uitbreidingen die zijn gemaakt, is het tonen van een RSS-feed dat nieuws weergeeft. Ook is het dashboard aangepast zodat de meter van de build status verdwijnt wanneer de build compleet is. Enkele screenshots van het dashboard uit de derde sprint zijn te zien in Sectie \ref{resultaat}.
 \paragraph{Ingebruikname} \todo{over vertellen}
 \subsection{Resultaat}
 \label{resultaat}
+\paragraph{Resultaat na sprint 2}
 De eerste versie van het dashboard is te zien in Figuur \ref{dash_1}. Het dashboard in zijn huidige vorm is gemaakt om getoond te worden op een HD-scherm met 16:9-ratio. Het is de bedoeling dat er zes tegels naast elkaar kunnen staan en dat er drie rijen zijn, wat maakt dat de status van 18 build jobs gelijktijdig getoond kunnen worden. Dit bleek ruim voldoende voor het NA-C team, aangezien er altijd maar op enkele builds tegelijkertijd gefocust wordt.\todo{Indien er een definitieve (dwz veranderde) versie is, praat erover!}
 
 \begin{figure}[ht!]
@@ -236,9 +237,48 @@ Als er gekeken wordt naar het voorstel opgemaakt in de literatuurstudie, is de a
 \label{dash_2}
 \end{figure}
 
-\subsection{Initiatieven voor interns \todo{Nederlands woord zoeken}}
+\paragraph{Resultaat na sprint 3}
+Na de enqu\^ete (te vinden in Appendix \ref{enquete2}) zijn nog enkele veranderingen doorgevoerd. De belangrijkste zijn:
+\begin{itemize}
+\item De meter verdwijnt wanneer de \textit{build} niet bezig is, zo leidt deze niet onnodig af.
+\item Er is een \textit{RSS-feed} toegevoegd voor nieuwsitems.
+\item Er kunnen zones van \textit{widgets} gecre\"eerd worden, om te tonen welke samen horen. In Figuur \ref{dash_3} is dit gedaan met de nieuwsitems, maar het kan dus ook perfect met de \textit{build widgets}.
+\end{itemize}
+
+Er zijn ook twee nieuwe kleuren van \textit{widgets} toegevoegd:
+\begin{itemize}
+\item Zwart: de desbetreffende \textit{build} is uitgeschakeld (\textit{disabled}). Er wordt op deze \textit{widget} geen weerbericht getoond.
+\item Lichtblauw: deze kleur is bedoeld voor de nieuws\textit{widget}, om deze duidelijk te kunnen onderscheiden van de Jenkins \textit{widgets}.
+\end{itemize}
+
+Het finale resultaat is te zien in Figuur \ref{dash_3}. Op Figuur \ref{dash_4} is het dashboard te zien op de televisie van de afdeling. Figuur \ref{dash_5} toont de finale versie van het dashboard in meer detail.
+
+\begin{figure}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=60mm]{dashboard_screenshot4.png}
+\caption{Finale versie dashboard.}
+\label{dash_3}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=60mm]{dashboardresult.jpg}
+\caption{Finale dashboard op televisie.}
+\label{dash_4}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{dashboard_screenshot5.png}
+\caption{Gedetailleerd overzicht van de finale versie van het dashboard.} 
+\label{dash_5}
+\end{figure}
+
+\subsection{Initiatieven voor stagiairs}
 \label{interns}
-Alcatel-Lucent organiseerde in de zomer van 2015 een initiatief om alle interns met elkaar in contact te brengen tijdens speciale info-events en \textit{meetings}. Op deze manier konden interns van verschillende afdelingen met elkaar bespreken hoe de stage op hun afdeling verliep en zo ervaringen met elkaar uitwisselen. Er zijn verschillende contactmomenten georganiseerd, meestal tijdens de middagpauze. Er waren verschillende bijeenkomsten, waaronder samen lunchen om kennis te maken en een gesprek met Joeri Veldeman, begonnen als doctor in de \textit{electrical engineering} bij Alcatel en nu hoofd van de afdeling van human resources. Zijn ongewone carri\`erepad werd ons uitgelegd en hij heeft informeel met ons gepraat over ons verdere studietrajecten.
+Alcatel-Lucent organiseerde in de zomer van 2015 een initiatief om alle stagiairs met elkaar in contact te brengen tijdens speciale info-events en \textit{meetings}. Op deze manier konden stagiairs van verschillende afdelingen met elkaar bespreken hoe de stage op hun afdeling verliep en zo ervaringen met elkaar uitwisselen. Er zijn verschillende contactmomenten georganiseerd, meestal tijdens de middagpauze. Er waren verschillende bijeenkomsten, waaronder samen lunchen om kennis te maken en een gesprek met Joeri Veldeman, begonnen als doctor in de \textit{electrical engineering} bij Alcatel en nu hoofd van de afdeling van human resources. Zijn ongewone carri\`erepad werd ons uitgelegd en hij heeft informeel met ons gepraat over ons verdere studietrajecten.
 Verder is er een infosessie geweest over ALU Labs, waarin enkele van de zaken aan bod kwamen waarin Alcatel-Lucent investeert en research bij uitvoert. Er was ook een infosessie over fixed networks, waarbij uitleg gegeven werd over wat het team in Antwerpen allemaal verwezenlijk en waarbij we een bezoek brachten aan een van de labo's.\\
 Dit alles maakte dat de stage niet alleen een verrijking van mijn kennis binnen de afdeling werd, maar ook daarbuiten, waarbij contact met andere studenten gelegd werd.
 
@@ -255,6 +295,7 @@ Waar versiecontrole tijdens het project van Software-Ontwerp aangeraden, maar ni
 
 \section{Krititsche reflectie competenties}
 \label{reflectie}
+Het originele document met competenties die ik wenste te verbeteren is te vinden in Appendix \ref{competenties}.
 \begin{itemize}
 \item Technische competenties die ik hoopte te verbeteren:
 \begin{description}
@@ -367,30 +408,30 @@ A third, less tile-oriented dashboard is Team Dashboard\footnote{http://fdietz.g
 
 \begin{thebibliography}{11} 
 
-\bibitem{few} Stephen Few, \emph{Dashboard Design For Real-Time Situation Awareness}, http://www.perceptualedge.com/articles/Whitepapers/Dashboard\_Design.pdf, consulted on 09/07/2015
+\bibitem{few} Stephen Few (2007). \emph{Dashboard Design For Real-Time Situation Awareness.} [09/07/2015, published at: http://www.perceptualedge.com/articles/Whitepapers/Dashboard\_Design.pdf]
 
-\bibitem{skelton} Matthew Skelton, \emph{What Makes an Effective Build and Deployment Radiator Screen?}, http://blog.matthewskelton.net/2013/03/11/what-makes-an-effective-build-and-deployment-radiator-screen/, consulted on 09/07/2015
+\bibitem{skelton} Matthew Skelton. \emph{What Makes an Effective Build and Deployment Radiator Screen?.} [09/07/2015, published at: http://blog.matthewskelton.net/2013/03/11/what-makes-an-effective-build-and-deployment-radiator-screen/]
 
-\bibitem{smith} Nick Smith, \emph{Designing and Building Great Dashboards - 6 Golden Rules to Successful Dashboard Design}, https://www.geckoboard.com/blog/building-great-dashboards-6-golden-rules-to-successful-dashboard-design/, consulted on 09/07/2015
+\bibitem{smith} Nick Smith. \emph{Designing and Building Great Dashboards - 6 Golden Rules to Successful Dashboard Design.} [09/07/2015, published at: https://www.geckoboard.com/blog/building-great-dashboards-6-golden-rules-to-successful-dashboard-design/]
 
-\bibitem{gemignani} Zach Gemignani, \emph{A Dashboard Alerts Checklist}, http://www.juiceanalytics.com/writing/dashboard-alerts-checklist/, consulted on 09/07/2015
+\bibitem{gemignani} Zach Gemignani. \emph{A Dashboard Alerts Checklist.} [09/07/2015, published at: http://www.juiceanalytics.com/writing/dashboard-alerts-checklist/]
 
-\bibitem{juice} No author specified, \emph{A Guide to Creating Dashboards People Love to Use}, http://www.cpoc.org/assets/Data/guide\_to\_dashboard\_design1.pdf, consulted on 10/07/2015
+\bibitem{juice} No author specified. \emph{A Guide to Creating Dashboards People Love to Use.} [10/07/2015, published at: http://www.cpoc.org/assets/Data/guide\_to\_dashboard\_design1.pdf]
 
 Images:
 
-\bibitem{sun} \emph{Sun}, http://azcoloring.com/coloring-page/112445
+\bibitem{sun} \emph{Sun.} [http://azcoloring.com/coloring-page/112445]
 
-\bibitem{rain} \emph{Rain cloud}, http://www.clipartpanda.com/categories/animated-rain-clouds
+\bibitem{rain} \emph{Rain cloud.} [http://www.clipartpanda.com/categories/animated-rain-clouds]
 
-\bibitem{red_dot} \emph{Red dot}, http://www.thepointless.com/reddot
+\bibitem{red_dot} \emph{Red dot.} [http://www.thepointless.com/reddot]
 
-\bibitem{pink_dot} \emph{Pink dot}, http://www.create-a-mural.com/dry-erase-11-soft-pink-dot-decal.html
+\bibitem{pink_dot} \emph{Pink dot.} [http://www.create-a-mural.com/dry-erase-11-soft-pink-dot-decal.html]
 
-\bibitem{dashboard} \emph{Example dashboard},  https://camo.githubusercontent.com/
+\bibitem{dashboard} \emph{Example dashboard.}  [https://camo.githubusercontent.com/
 1509a366bd27fad24ba09c45793308a85bcbf8bf/687474703a2f2f662e636c2e6c792f6974656d732
 f336330743076335a31313145306f3436333033322f53637265656e25323053686f742532303230313
-32d31302d30332532306174253230382e34362e3437253230504d2e706e67
+32d31302d30332532306174253230382e34362e3437253230504d2e706e67]
 
 \end{thebibliography}
 \clearpage
@@ -498,6 +539,25 @@ Suggesties en negatieve puntjes die aangehaald zijn, zijn de volgende:
 \end{itemize}
 
 Het is duidelijk dat enkele mensen nog vragen hadden bij het dashboard, dus is hen nog extra uitleg gegeven. Enkele van de voorstellen die gedaan zijn, zijn nog verder uitgewerkt.
+
+\clearpage
+
+\section{Bedrijfservaring: competenties}
+\label{competenties}
+
+\begin{itemize}
+\item Technische competenties die ik hoop te verbeteren:
+\begin{description}
+\item[Bijleren over version control:] mijn taak zal erin bestaan de werking van het version control systeem overzichtelijker te maken. Op deze manier zal ik een inzicht krijgen in hoe version control gebruikt wordt in een bedrijfsomgeving.
+\item[Leren werken met Jenkins:] ik had nog nooit van dit continuous integration systeem gehoord, maar het lijkt me nuttig en interessant om hierover te leren. Die ervaring kan ik eventueel gebruiken in volgende opdrachten.
+\item[Mij inwerken in een reeds lopend project:] aan de KU Leuven moeten we meestal projecten vanaf nul beginnen maken, hier zal ik in een reeds bestaand project terechtkomen. Me hierin inwerken en leren hoe andere mensen de zaken aanpakken, lijkt me heel leerrijk.
+\end{description}
+\item Persoonlijke competenties die ik hoop te verbeteren:
+\begin{description}
+\item[Leren werken in grote teams:] aan de KU Leuven werk je ten hoogste met 6 mensen samen, wat al een uitdaging vormt op zich. Nu zal ik in een bedrijfsomgeving komen waarbij men met veel meer mensen samenwerkt, hieruit verwacht ik dus te leren hoe je moet samenwerken in heel grote groepen.
+\item[Plannen op lange termijn:] bij projecten aan de KU Leuven kreeg je interne (kleine) deelopdrachten bij projecten, hier zal ik meer zelf moeten plannen en zien wat realiseerbaar is binnen vooropgestelde tijd.
+\end{description}
+\end{itemize}
 
 \end{appendices}
 
