@@ -105,14 +105,24 @@ Motive NA-C staat in voor het analyseren en onderhouden van de koperlijnen. Hun 
 Het team van Bart werkt volgens de scrum-methode, zoals kort werd aangehaald tijdens de hoorcollege's van Software-Ontwerp. Scrum is een voorbeeld van een agile werkmethode, waarbij men ervan uitgaat dat de vereisten voor het project kunnen en zullen veranderen gedurende het project. Deze werkmethode staat tegenover de "klassieke" watervalmethode, waarbij men eerst de vereisten opstelt, om deze vervolgens te implementeren, dit te evalueren en het systeem vervolgens te onderhouden. Het probleem hierbij is dat de communicatie tussen de klant en het bedrijf niet optimaal verloopt, gezien de klant nog van gedachte kan veranderen over de \textit{requirements} die hij wil en deze meestal niet tijdens het ontwikkelingsproces kunnen doorgevoerd worden. Als deze pas in de onderhoudsfase ontdekt en aangekaart worden, is het heel kostelijk om (grote) veranderingen door te voeren.\\
 Bij een agile werkmethode, waar scrum een onderdeel van is, gaat men er van uit dat de klant op voorhand niet perfect kan weten wat hij wil en dat hij dus de \textit{requirements} zal aanpassen. Hierop wordt dan ingespeeld tijdens het ontwikkelingsproces, door dit niet zoals het watervalmodel te zien, maar te werken in ontwikkelingsfases van korte perioden, die gewoonlijk \'e\'en tot vier weken duren. Op deze manier kunnen veranderingen in de requirements snel opgepikt en doorgevoerd worden, wat het ontwikkelingsproces minder kostelijk maakt.\\
 De term "scrum" is afkomstig vanuit rugby, waarbij de twee teams voorovergebogen tegen elkaar leunen, met de hoofden bij elkaar. De bal wordt dan in deze groep gegooid, waarop ze proberen om de bal als eerste in hun bezit te krijgen.\\
-De gelijkenis met de software-ontwikkeling-scrum is dat het team heel nauw samenwerkt, inspeelt op veranderende omstandigheden en zo samen tot een doel komt. De samenwerking uit zich onder andere in dagelijkse stand-up meetings\todo{foto toevoegen}, die telkens rond hetzelfde uur plaatsvinden, ongeacht of iedereen aanwezig is of niet. Tijdens deze meetings vertelt iedereen wat hij/zij de dag ervoor heeft gedaan, welke problemen er zijn opgetreden en of er daar hulp bij nodig is en wat de planning voor de komende dag is. Op deze manier is iedereen op de hoogte van wie waarmee bezig is en kunnen problemen snel opgelost worden. Bij het NA-C team in Antwerpen maakt men hierbij ook gebruik van het agile dashboard van JIRA, waarbij gevisualiseerd wordt wie waarmee bezig is (zie Figuur \ref{jira}). Indien iemand ergens problemen mee heeft, doet men aan pair-programming, waarbij men bij elkaar gaat zitten en samen nadenkt over hoe het desbetreffende probleem opgelost kan worden en dit ook samen uit te werken.\\
+De gelijkenis met de software-ontwikkeling-scrum is dat het team heel nauw samenwerkt, inspeelt op veranderende omstandigheden en zo samen tot een doel komt. De samenwerking uit zich onder andere in dagelijkse stand-up meetings, die telkens rond hetzelfde uur plaatsvinden, ongeacht of iedereen aanwezig is of niet. Tijdens deze meetings vertelt iedereen wat hij/zij de dag ervoor heeft gedaan, welke problemen er zijn opgetreden en of er daar hulp bij nodig is en wat de planning voor de komende dag is. Een foto van een van de stand-up meetings van het NA-C team is te zien op Figuur \ref{standup}. Op deze manier is iedereen op de hoogte van wie waarmee bezig is en kunnen problemen snel opgelost worden. Bij het NA-C team in Antwerpen maakt men hierbij ook gebruik van het agile dashboard van JIRA, waarbij gevisualiseerd wordt wie waarmee bezig is (zie Figuur \ref{jira}). Indien iemand ergens problemen mee heeft, doet men aan pair-programming, waarbij men bij elkaar gaat zitten en samen nadenkt over hoe het desbetreffende probleem opgelost kan worden en dit ook samen uit te werken.\\
 
-\begin{figure}[ht!]
+\begin{figure}
 \centering
-\includegraphics[width=90mm]{CaptureJira.png}
-\caption{Het JIRA dashboard van het NA-C team in Antwerpen.} 
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=60mm]{CaptureJira.png}
+\caption{Het JIRA dashboard van het NA-C team in Antwerpen.}
 \label{jira}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=60mm]{standupmeeting.jpg}
+\caption{Een stand-up meeting van het NA-C team in Antwerpen.}
+\label{standup}
+\end{minipage}
 \end{figure}
+
 
 In het NA-C team heeft men sprints van twee weken, wat wil zeggen dat men elke twee weken een evaluatie doet van het werk dat in de afgelopen twee weken verzet is en welke veranderingen er naar de volgende sprint toe moeten doorgevoerd worden. Aan het begin van een sprint is er dan de sprint planning, waarin er bekeken wordt wat er moet gebeuren met welke prioriteit en wie wat gaat doen, op een heel algemeen niveau. Men maakt hierbij gebruik van user-stories, die een bepaalde taak omschrijven en de subtaken ervan. Het beschrijft wat de gebruiker nodig heeft bij het uitvoeren van zijn taak en bepalen zodus wat er moet ontwikkeld worden om de gebruiker hierbij te helpen. Het omschrijft het "wie", "wat" en "waarom" van deze vereisten op hoog niveau. Een voorbeeld van een user-story is te zien in Figuur \ref{user_story}. Aan het einde van de sprint is er de sprint review, waarbij besproken wordt wat er bereiekt is en waarbij er eventueel demo's gegeven worden van wat er gerealiseerd is. Ook is er de sprint retrospective, waarbij men gaat oplijsten wat er goed en minder goed is gegaan, welke problemen er (binnen het team) waren en hoe deze opgelost kunnen worden.
 
@@ -125,14 +135,14 @@ In het NA-C team heeft men sprints van twee weken, wat wil zeggen dat men elke t
 
 \subsubsection{Continuous integration}
 Aangezien er regelmatig releases van software zijn, doet men aan continuous integration, wat inhoudt dat wanneer iemand klaar is met het schrijven van een stuk code en deze commit, alle builds en testen hierrond automatisch zullen runnen zodat fouten in een vroeg stadium kunnen gevonden en opgelost worden.\\
-In Antwerpen maakt men gebruik van Jenkins\footnote{https://jenkins-ci.org/}, een open-source continuous integration systeem. Jenkins heeft een dashboard dat een overzicht toont van alle builds, maar je kan ook filteren op zelfgemaakte criteria, zodat je enkel de status van bepaalde builds ziet. Een screenshot van dit dashboard is te zien in Figuur \ref{jenkins}. Het overzicht van elke build toont een gekleurde bol om aan te geven of de laatste build geslaagd (groen/blauw) of gefaald is. Als er testen gefaald zijn, dan zal de bol geel kleuren.
+In Antwerpen maakt men gebruik van Jenkins\footnote{https://jenkins-ci.org/}, een open-source continuous integration systeem. Jenkins heeft een dashboard dat een overzicht toont van alle builds, maar je kan ook filteren op zelfgemaakte criteria, zodat je enkel de status van bepaalde builds ziet. Een screenshot van dit dashboard is te zien in Figuur \ref{jenkins_orig}. Het overzicht van elke build toont een gekleurde bol om aan te geven of de laatste build geslaagd (groen/blauw) of gefaald is. Als er testen gefaald zijn, dan zal de bol geel kleuren.
 Er is ook een weerbericht dat toont hoe stabiel de build is, waarbij slecht weer duidt op een instabiele build en goed weer op een stabiele build. 
 
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=90mm]{CaptureJenkins.png}
 \caption{Het Jenkins dashboard, zoals oorspronkelijk gebruikt op de afdeling NA-C in Antwerpen.} 
-\label{jenkins}
+\label{jenkins_orig}
 \end{figure}
 
 Het probleem met dit dashboard is dat het niet echt overzichtelijk is. De kleur van de bollen trekt wel de aandacht, maar als je wil zien over welke build het gaat, is dit niet leesbaar, tenzij je je vlak voor het scherm bevindt. Het Jenkins dashboard wordt op de werkvloer weergegeven op een grote televisie, maar men heeft niet de neiging hiernaar te kijken tijdens de uren, waardoor gefaalde builds enkel maar zichtbaar worden voor het team wanneer ze zelf Jenkins openen op hun PC of tijdens de stand-up meeting. Zoals op Figuur \ref{tv_1} te zien is, moet je zelfs als je voor het dashboard staat goed kijken waar de build staat waarin je ge\"interesseerd bent.
@@ -171,7 +181,7 @@ Na het onderzoek en de literatuurstudie, heb ik een voorstel voor dashboardontwe
 Op het einde van de eerste sprint heb ik met Bart een sprint review en retrospective gehouden, om te zien waar ik stond. We hebben deze meeting gecombineerd met de sprint planning, waarbij ik mocht aangeven hoe ik van plan was het dashboard uit te werken en met welke tools. Ik werd hierin heel vrij gelaten, zodat ik zelf kon bepalen wat binnen mijn mogelijkheden lag en wat niet.
 \paragraph{Gebruikte tools}
 Dashing is een dashboard framework dat geschreven is in Sinatra, een open source software web applicatie geschreven in Ruby. De ontwikkeling gebeurde op Linux, waarbij ik gebruik maakte van Ubuntu 14.04. Op deze PC is dan een lokale Jenkins-omgeving opgezet, zodat het dashboard tijdens de ontwikkeling hiermee getest kon worden. Het schrijven van de code gebeurde in gedit en debuggen werd gedaan via de terminal.\\
-De "tegels" op het dashboard worden omschreven als "widgets" waarbij je verschillende soorten widgets kan hebben. Ik heb me toegespitst op \'e\'en widget om informatie over Jenkins te tonen\todo{indien RSS ook: erbij zetten!}. Deze widget kan dan gebruikt worden voor verschillende builds, het is niet de bedoeling om voor elke build een nieuw widget te ontwikkelen (tenzij je verschillende informatie wilt tonen op de verschillende Jenkins-widgets).
+De "tegels" op het dashboard worden omschreven als "widgets" waarbij je verschillende soorten widgets kan hebben. Ik heb me toegespitst op een widget om informatie over Jenkins te tonen. Deze widget kan dan gebruikt worden voor verschillende builds, het is niet de bedoeling om voor elke build een nieuw widget te ontwikkelen (tenzij je verschillende informatie wilt tonen op de verschillende Jenkins-widgets). Tijdens de derde sprint is hier nog een widget voor RSS-feeds aan toegevoegd, zodat ook de nieuws headlines \todo{juist woord zoeken} gevolgd kunnen worden.
 \paragraph{Gebruikte talen}
 Het schrijven van het dashboard is gebeurd in verschillende talen, hieronder een opsomming welke taal gebruikt werden.
 \begin{description}
@@ -194,7 +204,8 @@ De verschillende bestanden worden als volgt gebruikt:
 \subsubsection{Sprint 3: Feedback en verbetering}
 \label{sprint3}
 Na de sprint review heb ik de Alcatel-Lucent Jenkins-server ge\"integreerd in het dashboard, wat nog anderhalve dag van debugging vroeg, gezien de Jenkins-server nu niet lokaal runde, maar op een andere server. Ook gebruikt men bij Alcatel-Lucent een andere versie van Jenkins, waardoor bepaalde sleutelwoorden waarop geparset wordt anders heten.\\
-Na de sprint retrospective van sprint 2 en de sprint planning van sprint 3 heb ik nog een enqu\^ete gedaan om positieve en negatieve puntjes te verzamelen waar men bij de voorstelling van het dashboard tijdens de demo misschien niet was opgekomen. De resultaten van deze enq\^ete zijn te vinden in de appendix.\todo{verwijzing toevoegen}
+Na de sprint retrospective van sprint 2 en de sprint planning van sprint 3 heb ik nog een enqu\^ete gedaan om positieve en negatieve puntjes te verzamelen waar men bij de voorstelling van het dashboard tijdens de demo misschien niet was opgekomen. De resultaten van deze enq\^ete zijn te vinden in appendix \ref{enquete2}.
+Een van de uitbreidingen die ik heb gemaakt, is het tonen van een RSS-feed dat nieuws weergeeft. Ook is het dashboard aangepast zodat de meter van de build status verdwijnt wanneer de build compleet is.
 \paragraph{Ingebruikname} \todo{over vertellen}
 \subsection{Resultaat}
 \label{resultaat}
@@ -446,6 +457,46 @@ Bijkomende opmerkingen zijn de volgende:
 \item "Overview of last builds = list or circle with \% of failed/success"
 \item "I'd put more visibility for the weather report/more important than current build progress. Maybe also add the date of the last build/number of test or failing tests?"
 \end{itemize}
+
+\clearpage
+
+\section{Enqu\^ete 2}
+\label{enquete2}
+\paragraph{Enqu\^ete}
+Er werd een formulier rondgegeven waarop men positieve en negatieve puntjes kon opschrijven, alsook suggesties van wat men nog graag zou zien op het dashboard.
+
+\paragraph{Resultaten}
+De positieve opmerkingen die gegeven zijn, zijn de volgende:
+\begin{itemize}
+\item "The requirements are met."
+\item "Good looking/shows clearly the status of the build."
+\item "Looks good visually, nice colors, nice layout"
+\item "Very clear indication of which 'project' failed. $\rightarrow$ Big title + background color."
+\item "Good look and feel. Realtime updates - very nice."
+\item "3 colors $\rightarrow$ in 1 quick view you see the complete overview."
+\end{itemize}
+
+Suggesties en negatieve puntjes die aangehaald zijn, zijn de volgende:
+\begin{itemize}
+\item "Build name is in case of gray or yellow background not readable."
+\item "It does not show all the jobs. It shows maybe too much info (instead of the progress bar, you could make the background blink when a build is in progress). $\Rightarrow$ It would be better to have different 'zones'. The idea would be to have jobs separated by version and some jobs 'highlighted'. What matters is that when there is a release soon, we can check visually the status of all the jobs related to that release. There is no need to have all the weather info/progress for all the builds."
+\item "Build progress is less important so it can be shown less big."
+\item "Add an RSS feed for news items."
+\item "Wishlist
+\begin{itemize}
+\item Clicking a box should take us to the job. Top right $\rightarrow$ add link to Jenkins home, maybe the list of all jobs (the Jenkins server) - low priority.
+\item Time in AM/PM.
+\item The colours during 'build in progress' and 'build disabled' are not the same as in Jenkins.
+\item Toggle button which can group per product and per release (low priority).
+\item Questions:
+\begin{itemize}
+\item Will this survive a Jenkins upgrade?
+\item How easy is it to add a new build indicator?"
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+Het is duidelijk dat enkele mensen nog vragen hadden bij het dashboard, dus is hen nog extra uitleg gegeven. Enkele van de voorstellen die gedaan zijn, zijn nog verder uitgewerkt.
 
 \end{appendices}
 
