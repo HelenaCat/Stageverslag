@@ -68,7 +68,7 @@ Vast nummer binnen het bedrijf: +32 3 240 8525
 \begin{center}
 \textbf{Abstract}\\
 \end{center}
-Dit verslag beschrijft de opgedane kennis en ervaring tijdens de 6 weken-durende stage bij Alcatel-Lucent in Antwerpen. Het doel tijdens de stage was om een dashboard te ontwerpen en implementeren voor het continuous integration systeem Jenkins en op deze manier "Jenkins-awareness" te cre\"eren.\\
+Dit verslag beschrijft de opgedane kennis en ervaring tijdens de 6 weken-durende stage bij Alcatel-Lucent in Antwerpen. Het doel tijdens de stage was om een dashboard te ontwerpen en implementeren voor het continuous integration systeem Jenkins en op deze manier ``Jenkins-awareness" te cre\"eren.\\
 Het dashboard is ontwikkeld met Dashing en toont het overzicht van een reeks zelfgekozen builds. De ontwikkeling is gebeurd in Javascript, Coffeescript, SCSS, Ruby en HTML op Linux.\\
 Gedurende de stage werd ik erg betrokken bij alle onderdelen van het scrum-proces, zodat ik me een beeld kon vormen van hoe dit er in het bedrijfsleven aan toe gaat. \todo{beter maken} \todo{vermelden dat in werking genomen}
 
@@ -76,7 +76,7 @@ Gedurende de stage werd ik erg betrokken bij alle onderdelen van het scrum-proce
 \clearpage
 
 \section{Inleiding}
-De probleemstelling, waarvoor tijdens de stage een oplossing ontworpen werd, gaat als volgt. Op de afdeling Motive Network-Analyzer Copper (NA-C) bij Alcatel-Lucent in Antwerpen doet men aan continuous integration, waarbij gebruik gemaakt wordt van de tool Jenkins. Deze biedt een dashboard om het overzicht van de build statussen weer te geven, maar de software-ontwikkelaars hebben niet de neiging deze te bekijken op de televisie die aanwezig is. Het doel van de stage was om "Jenkins-awareness" te cre\"eren en een dashboard te ontwikkelen dat snel een overzicht toont van de builds waar aandacht aan besteed moeten worden. Op de afdeling NA-C werkt men volgens het agile-principe van scrum, waar ook gebruik van gemaakt werd bij het stage-project. Zo werd er een project voor de stage aangemaakt en werden er tweewekelijkse sprints ingepland en evaluaties uitgevoerd.\\
+De probleemstelling, waarvoor tijdens de stage een oplossing ontworpen werd, gaat als volgt. Op de afdeling Motive Network-Analyzer Copper (NA-C) bij Alcatel-Lucent in Antwerpen doet men aan continuous integration, waarbij gebruik gemaakt wordt van de tool Jenkins. Deze biedt een dashboard om het overzicht van de build statussen weer te geven, maar de software-ontwikkelaars hebben niet de neiging deze te bekijken op de televisie die aanwezig is. Het doel van de stage was om ``Jenkins-awareness" te cre\"eren en een dashboard te ontwikkelen dat snel een overzicht toont van de builds waar aandacht aan besteed moeten worden. Op de afdeling NA-C werkt men volgens het agile-principe van scrum, waar ook gebruik van gemaakt werd bij het stage-project. Zo werd er een project voor de stage aangemaakt en werden er tweewekelijkse sprints ingepland en evaluaties uitgevoerd.\\
 
 Om dat te realiseren, is er tijdens de eerste sprint een literatuurstudie uitgevoerd om zo een idee te vormen van hoe het dashboard eruit moet zien. Tijdens de tweede sprint is het dashboard ontwikkeld, met behulp van Dashing. Aan het einde van de tweede sprint is deze ge\"evalueerd door middel van een demonstratie voor de teams in Antwerpen, Chennai en Bangalor. Op basis van de feedback die hierop ontvangen werd, zijn veranderingen doorgevoerd gedurende de derde sprint. In het tweede deel van de derde sprint is het dashboard in gebruik genomen op de Jenkins server van NA-C.\\
 
@@ -103,9 +103,9 @@ Motive NA-C staat in voor het analyseren en onderhouden van de koperlijnen. Hun 
 \label{methoden}
 \todo{subsubsection maken van de afdeling?}
 \subsubsection{Scrum}
-Het team van Bart werkt volgens de scrum-methode, zoals kort werd aangehaald tijdens de hoorcollege's van Software-Ontwerp. Scrum is een voorbeeld van een agile werkmethode, waarbij men ervan uitgaat dat de vereisten voor het project kunnen en zullen veranderen gedurende het project. Deze werkmethode staat tegenover de "klassieke" watervalmethode, waarbij eerst de vereisten worden opgesteld, die vervolgens te implementeren en evalueren om het systeem vervolgens te onderhouden. Het probleem hierbij is dat de communicatie tussen de klant en het bedrijf niet optimaal verloopt, gezien de klant nog van gedachte kan veranderen over de \textit{requirements} die hij wil en deze meestal niet tijdens het ontwikkelingsproces kunnen doorgevoerd worden. Als deze pas in de onderhoudsfase ontdekt en aangekaart worden, is het heel kostelijk om (grote) veranderingen door te voeren.\\
+Het team van Bart werkt volgens de scrum-methode, zoals kort werd aangehaald tijdens de hoorcollege's van Software-Ontwerp. Scrum is een voorbeeld van een agile werkmethode, waarbij men ervan uitgaat dat de vereisten voor het project kunnen en zullen veranderen gedurende het project. Deze werkmethode staat tegenover de ``klassieke" watervalmethode, waarbij eerst de vereisten worden opgesteld, die vervolgens te implementeren en evalueren om het systeem vervolgens te onderhouden. Het probleem hierbij is dat de communicatie tussen de klant en het bedrijf niet optimaal verloopt, gezien de klant nog van gedachte kan veranderen over de \textit{requirements} die hij wil en deze meestal niet tijdens het ontwikkelingsproces kunnen doorgevoerd worden. Als deze pas in de onderhoudsfase ontdekt en aangekaart worden, is het heel kostelijk om (grote) veranderingen door te voeren.\\
 Bij een agile werkmethode, waar scrum een onderdeel van is, gaat men er van uit dat de klant op voorhand niet perfect kan weten wat hij wil en dat hij dus de \textit{requirements} zal aanpassen. Hierop wordt dan ingespeeld tijdens het ontwikkelingsproces, door dit niet zoals het watervalmodel te zien, maar te werken in ontwikkelingsfases van korte perioden, die gewoonlijk \'e\'en tot vier weken duren. Op deze manier kunnen veranderingen in de \textit{requirements} snel opgepikt en doorgevoerd worden, wat het ontwikkelingsproces minder kostelijk maakt.\\
-De term "scrum" is afkomstig vanuit rugby, waarbij de twee teams voorovergebogen tegen elkaar leunen, met de hoofden bij elkaar. De bal wordt dan in deze groep gegooid, waarop ze proberen om de bal als eerste in hun bezit te krijgen.\\
+De term ``scrum" is afkomstig vanuit rugby, waarbij de twee teams voorovergebogen tegen elkaar leunen, met de hoofden bij elkaar. De bal wordt dan in deze groep gegooid, waarop ze proberen om de bal als eerste in hun bezit te krijgen.\\
 De gelijkenis met de software ontwikkeling-scrum is dat het team heel nauw samenwerkt, inspeelt op veranderende omstandigheden en zo samen tot een doel komt. De samenwerking uit zich onder andere in dagelijkse stand-up meetings, die telkens rond hetzelfde uur plaatsvinden, ongeacht of iedereen aanwezig is of niet. Tijdens deze meetings vertelt iedereen wat hij/zij de dag ervoor heeft gedaan, welke problemen er zijn opgetreden en of er daar hulp bij nodig is en wat de planning voor de komende dag is. Een foto van een van de stand-up meetings van het NA-C team is te zien op Figuur \ref{standup}. Op deze manier is iedereen op de hoogte van wie waarmee bezig is en kunnen problemen snel opgelost worden. Bij het NA-C team in Antwerpen maakt men hierbij ook gebruik van het \textit{agile} dashboard van JIRA, waarbij gevisualiseerd wordt wie waarmee bezig is (zie Figuur \ref{jira}). Indien iemand ergens problemen mee heeft, doet men aan \textit{pair-programming}, waarbij men bij elkaar gaat zitten en samen nadenkt over hoe het desbetreffende probleem opgelost kan worden en dat samen uit te werken.\\
 
 \begin{figure}
@@ -125,7 +125,7 @@ De gelijkenis met de software ontwikkeling-scrum is dat het team heel nauw samen
 \end{figure}
 
 
-In het NA-C team heeft men sprints van twee weken, wat wil zeggen dat men elke twee weken een evaluatie doet van het werk dat in de afgelopen twee weken verzet is en welke veranderingen er naar de volgende sprint toe moeten doorgevoerd worden. Aan het begin van een sprint is er dan de sprint planning, waarin er bekeken wordt wat er moet gebeuren met welke prioriteit en wie wat gaat doen, op een heel algemeen niveau. Men maakt hierbij gebruik van \textit{user-stories}, die een bepaalde taak omschrijven en de subtaken ervan. Het beschrijft wat de gebruiker nodig heeft bij het uitvoeren van zijn taak en bepalen zodus wat er moet ontwikkeld worden om de gebruiker hierbij te helpen. Het omschrijft het "wie", "wat" en "waarom" van deze vereisten op hoog niveau. Een voorbeeld van een user-story is te zien in Figuur \ref{user_story}. Aan het einde van de sprint is er de sprint review, waarbij besproken wordt wat er bereikt is en waarbij eventueel demo's gegeven worden van wat er gerealiseerd is. Ook is er de sprint retrospective, waarbij opgelijst wordt wat er goed en minder goed is gegaan, welke problemen er (binnen het team) waren en hoe die opgelost kunnen worden.
+In het NA-C team heeft men sprints van twee weken, wat wil zeggen dat men elke twee weken een evaluatie doet van het werk dat in de afgelopen twee weken verzet is en welke veranderingen er naar de volgende sprint toe moeten doorgevoerd worden. Aan het begin van een sprint is er dan de sprint planning, waarin er bekeken wordt wat er moet gebeuren met welke prioriteit en wie wat gaat doen, op een heel algemeen niveau. Men maakt hierbij gebruik van \textit{user-stories}, die een bepaalde taak omschrijven en de subtaken ervan. Het beschrijft wat de gebruiker nodig heeft bij het uitvoeren van zijn taak en bepalen zodus wat er moet ontwikkeld worden om de gebruiker hierbij te helpen. Het omschrijft het ``wie", ``wat" en ``waarom" van deze vereisten op hoog niveau. Een voorbeeld van een user-story is te zien in Figuur \ref{user_story}. Aan het einde van de sprint is er de sprint review, waarbij besproken wordt wat er bereikt is en waarbij eventueel demo's gegeven worden van wat er gerealiseerd is. Ook is er de sprint retrospective, waarbij opgelijst wordt wat er goed en minder goed is gegaan, welke problemen er (binnen het team) waren en hoe die opgelost kunnen worden.
 
 \begin{figure}[ht!]
 \centering
@@ -182,7 +182,7 @@ Na het onderzoek en de literatuurstudie, is er een voorstel voor dashboardontwer
 Op het einde van de eerste sprint vond een \textit{sprint review} en \textit{sprint retrospective} plaats, om de gemaakte vooruitgang te evalueren. Deze meeting werd gecombineerd met de sprint planning, waar een eerste versie van het ontwerp en de tools werden voorgesteld.
 \paragraph{Gebruikte tools}
 Dashing is een dashboard framework dat geschreven is in Sinatra, een open source software web applicatie geschreven in Ruby. De ontwikkeling gebeurde op Linux, waarbij gebruik gemaakt werd van Ubuntu 14.04. Op deze PC is een lokale Jenkins-omgeving opgezet, zodat het dashboard tijdens de ontwikkeling hiermee getest kon worden. Het schrijven van de code gebeurde in gedit en debuggen werd gedaan via de \textit{terminal}.\\
-De "tegels" op het dashboard worden omschreven als \textit{widgets} waarbij je verschillende soorten widgets kan hebben. Tijdens deze fase van het project werd er gefocust op een \textit{widget} om informatie over Jenkins te tonen. Deze \textit{widget} kan gebruikt worden voor verschillende builds, het is niet de bedoeling om voor elke build een nieuw widget te ontwikkelen, tenzij je verschillende informatie wilt tonen op de verschillende Jenkins-widgets. Tijdens de derde sprint is hier nog een widget voor RSS-feeds aan toegevoegd, zodat ook het meest recente nieuws gevolgd kan worden.
+De ``tegels" op het dashboard worden omschreven als \textit{widgets} waarbij je verschillende soorten widgets kan hebben. Tijdens deze fase van het project werd er gefocust op een \textit{widget} om informatie over Jenkins te tonen. Deze \textit{widget} kan gebruikt worden voor verschillende builds, het is niet de bedoeling om voor elke build een nieuw widget te ontwikkelen, tenzij je verschillende informatie wilt tonen op de verschillende Jenkins-widgets. Tijdens de derde sprint is hier nog een widget voor RSS-feeds aan toegevoegd, zodat ook het meest recente nieuws gevolgd kan worden.
 \paragraph{Gebruikte talen}
 Het schrijven van het dashboard is gebeurd in verschillende talen, hieronder een opsomming welke taal gebruikt werden.
 \begin{description}
@@ -307,7 +307,7 @@ Ondanks het te laat beginnen gebruiken van version control, zijn mijn competenti
 \item Persoonlijke competenties die ik hoopte te verbeteren:
 \begin{description}
 \item[Leren werken in grote teams] In het NA-C team in Antwerpen werken er een tiental mensen, in Bangalor en Chennai zijn er teams van gelijkaardige grootte. Doordat er dagelijks een standup meeting was met de mensen van het team in Antwerpen, was iedereen goed op de hoogte van wie wat deed en doordat men met sprints van twee weken werkte, kwamen problemen snel boven. Dit is iets dat ik zeker meeneem naar projecten in de toekomst toe, ik heb ervaren hoe al deze zaken kunnen helpen in het beter doen verlopen van een project.
-\item[Plannen op lange termijn] Aan het begin van mijn stage werd me meteen gezegd dat ik redelijk vrij gelaten ging worden in mijn planning, maar er werd wel gevraagd om er een op te stellen, zodat ik ook in sprints kon werken. Ik heb zelf voorstellen mogen doen en aan mijn eigen tempo (maar toch binnen de termijnen van de sprints) kunnen werken. Als er grote dingen te doen stonden, plande ik daar altijd genoeg tijd voor in, zodat ik uiteindelijk "te vroeg" klaar was en aan verbeteringen kon werken. Dit is een van de competenties die ik zowel in het tweede semester van mijn laatste bachelorjaar heb aangescherpt, als nu op de stage.  
+\item[Plannen op lange termijn] Aan het begin van mijn stage werd me meteen gezegd dat ik redelijk vrij gelaten ging worden in mijn planning, maar er werd wel gevraagd om er een op te stellen, zodat ik ook in sprints kon werken. Ik heb zelf voorstellen mogen doen en aan mijn eigen tempo (maar toch binnen de termijnen van de sprints) kunnen werken. Als er grote dingen te doen stonden, plande ik daar altijd genoeg tijd voor in, zodat ik uiteindelijk ``te vroeg" klaar was en aan verbeteringen kon werken. Dit is een van de competenties die ik zowel in het tweede semester van mijn laatste bachelorjaar heb aangescherpt, als nu op de stage.  
 \end{description}
 \end{itemize}
 
@@ -328,7 +328,7 @@ Onder de goede begeleiding van Bart heb ik grotendeels zelfstandig mijn doelen e
 
 
 \paragraph{General}
-A dashboard is a tool to quickly show information at a glance. Its purpose is to have the "reader" gather information without having to look things up; everything should be clear by having a quick look at the dashboard. At Alcatel-Lucent, they make use of the Jenkins dashboard, but it doesn't comply with the given description: in order to see what builds failed/succeeded, you need to find the build you're looking for and then check its status. It is clear from the -lack of- its use that this way of displaying the information does not suffice, since the TV dashboard is not/barely used but every employer looks up the dashboard on their own PC every once in a while. \\
+A dashboard is a tool to quickly show information at a glance. Its purpose is to have the ``reader" gather information without having to look things up; everything should be clear by having a quick look at the dashboard. At Alcatel-Lucent, they make use of the Jenkins dashboard, but it doesn't comply with the given description: in order to see what builds failed/succeeded, you need to find the build you're looking for and then check its status. It is clear from the -lack of- its use that this way of displaying the information does not suffice, since the TV dashboard is not/barely used but every employer looks up the dashboard on their own PC every once in a while. \\
 
 The purpose of this literature study is to create Jenkins awareness, so the developers can take a look at the TV dashboard a few times a day and have them see how the project is proceeding.\\
 One of the most important things is that the information displayed on the dashboard can be easily interpreted. This means that you don't want a cluttered dashboard with too much information so it becomes unclear.
@@ -348,7 +348,7 @@ In the case of software developers, they’ll want to see metrics about the buil
 In the case of the Jenkins dashboard, charts won’t tell you much, since it doesn’t really tell anything about the status of the last build. Below, the example of the Jenkins dashboard is further explained and a proposal is made that conforms to the guidelines of a good dashboard.
 
 \paragraph{Improving the Jenkins dashboard}
-The Jenkins dashboard, as seen in Figure \ref{jenkins}, displays a list of the builds of a project, together with a colored dot and a "weather report". The dot displays information about the last build, the color indicating whether it failed or succeeded and a flashing dot meaning the build is still in progress. 
+The Jenkins dashboard, as seen in Figure \ref{jenkins}, displays a list of the builds of a project, together with a colored dot and a ``weather report". The dot displays information about the last build, the color indicating whether it failed or succeeded and a flashing dot meaning the build is still in progress. 
 The color of the dot at that time then refers to the last finished build.
 The weather report tells you something about the stability of the builds. If the weather looks good, then the build is stable. The worse the weather gets, the less stable the build is. This way, you get an overall view about the stability of the different build jobs.
 
@@ -439,11 +439,11 @@ f336330743076335a31313145306f3436333033322f53637265656e25323053686f7425323032303
 \section{Enqu\^ete 1}
 \label{enquete1}
 \paragraph{Enqu\^ete}
-De enqu\^ete bestond uit een reeks voorbeeldtegels met bepaalde kenmerken (zie Figuur \ref{proposals}) die ook in de enqu\^ete zelf uitgelegd werden (het deel boven "Preferences"). De enqu\^ete bestond uit volgende vragen, met ruimte om commentaar te voorzien:\\
+De enqu\^ete bestond uit een reeks voorbeeldtegels met bepaalde kenmerken (zie Figuur \ref{proposals}) die ook in de enqu\^ete zelf uitgelegd werden (het deel boven ``Preferences"). De enqu\^ete bestond uit volgende vragen, met ruimte om commentaar te voorzien:\\
 
 \begin{minipage}{1.1 \textwidth}
 \begin{quote}
-"Hello" == name of build
+``Hello" == name of build
 \begin{enumerate}
 \item No progress meter for the currently running build. Background color indicating the success/failure of the last completed build, big weather report about the last builds.
 \item Small meter showing the progress of the currently running build, weather report at the bottom, background color indicating success/failure of last completed build.
@@ -493,11 +493,11 @@ Background color	&	9			&	0		\\	\hline
 
 Bijkomende opmerkingen zijn de volgende:
 \begin{itemize}
-\item "Would combine 1 and 3. Big weather report with small meter at the bottom"
-\item "It would be nice if we can show the failure count for failure builds"
-\item "I would replace 'last updated' with latest finished build and building since (if in progress). Only show meter when busy building"
-\item "Overview of last builds = list or circle with \% of failed/success"
-\item "I'd put more visibility for the weather report/more important than current build progress. Maybe also add the date of the last build/number of test or failing tests?"
+\item ``Would combine 1 and 3. Big weather report with small meter at the bottom"
+\item ``It would be nice if we can show the failure count for failure builds"
+\item ``I would replace 'last updated' with latest finished build and building since (if in progress). Only show meter when busy building"
+\item ``Overview of last builds = list or circle with \% of failed/success"
+\item ``I'd put more visibility for the weather report/more important than current build progress. Maybe also add the date of the last build/number of test or failing tests?"
 \end{itemize}
 
 \clearpage
@@ -510,21 +510,21 @@ Er werd een formulier rondgegeven waarop men positieve en negatieve puntjes kon 
 \paragraph{Resultaten}
 De positieve opmerkingen die gegeven zijn, zijn de volgende:
 \begin{itemize}
-\item "The requirements are met."
-\item "Good looking/shows clearly the status of the build."
-\item "Looks good visually, nice colors, nice layout"
-\item "Very clear indication of which 'project' failed. $\rightarrow$ Big title + background color."
-\item "Good look and feel. Realtime updates - very nice."
-\item "3 colors $\rightarrow$ in 1 quick view you see the complete overview."
+\item ``The requirements are met."
+\item ``Good looking/shows clearly the status of the build."
+\item ``Looks good visually, nice colors, nice layout"
+\item ``Very clear indication of which 'project' failed. $\rightarrow$ Big title + background color."
+\item ``Good look and feel. Realtime updates - very nice."
+\item ``3 colors $\rightarrow$ in 1 quick view you see the complete overview."
 \end{itemize}
 
 Suggesties en negatieve puntjes die aangehaald zijn, zijn de volgende:
 \begin{itemize}
-\item "Build name is in case of gray or yellow background not readable."
-\item "It does not show all the jobs. It shows maybe too much info (instead of the progress bar, you could make the background blink when a build is in progress). $\Rightarrow$ It would be better to have different 'zones'. The idea would be to have jobs separated by version and some jobs 'highlighted'. What matters is that when there is a release soon, we can check visually the status of all the jobs related to that release. There is no need to have all the weather info/progress for all the builds."
-\item "Build progress is less important so it can be shown less big."
-\item "Add an RSS feed for news items."
-\item "Wishlist
+\item ``Build name is in case of gray or yellow background not readable."
+\item ``It does not show all the jobs. It shows maybe too much info (instead of the progress bar, you could make the background blink when a build is in progress). $\Rightarrow$ It would be better to have different 'zones'. The idea would be to have jobs separated by version and some jobs 'highlighted'. What matters is that when there is a release soon, we can check visually the status of all the jobs related to that release. There is no need to have all the weather info/progress for all the builds."
+\item ``Build progress is less important so it can be shown less big."
+\item ``Add an RSS feed for news items."
+\item ``Wishlist
 \begin{itemize}
 \item Clicking a box should take us to the job. Top right $\rightarrow$ add link to Jenkins home, maybe the list of all jobs (the Jenkins server) - low priority.
 \item Time in AM/PM.
