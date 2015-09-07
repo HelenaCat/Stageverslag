@@ -6,6 +6,7 @@
 \usepackage{todonotes}
 \usepackage{graphicx}
 \usepackage[titletoc,title]{appendix}
+\usepackage{pdfpages}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks,
@@ -71,6 +72,7 @@ Vast nummer binnen het bedrijf: +32 3 240 8525
 Dit verslag beschrijft de opgedane kennis en ervaring tijdens mijn \todo{niet mijn?} 6 weken-durende stage bij Alcatel-Lucent in Antwerpen. Het doel tijdens de stage was om een dashboard te ontwerpen en implementeren voor het \textit{continuous integration}-systeem Jenkins en op deze manier ``Jenkins-\textit{awareness}" te cre\"eren.\\
 Het dashboard is succesvol ontwikkeld met behulp van Dashing en toont het overzicht van een reeks zelfgekozen \textit{builds}. De ontwikkeling is gebeurd in Javascript, Coffeescript, SCSS, Ruby en HTML op Linux. Het dashboard is uiteindelijk in werking genomen.\\
 Het team in Antwerpen zorgde voor enorme betrokkenheid gedurende de stage, door te tonen hoe alle onderdelen van het \textit{agile} proces in zijn werk gaan. \todo{beter maken}
+\todo{conclusies}
 
 \tableofcontents
 \clearpage
@@ -82,13 +84,13 @@ Om tot het gewenste resultaat te komen is er tijdens de eerste sprint een litera
 
 De voornaamste resultaten zijn het dashboard dat succesvol ontwikkeld is, door te werken via de \textit{scrum}-methode. De talen die hierbij gebruikt zijn, zijn Javascript, Coffeescript, (S)CSS, HTML en Ruby. Het dashboard is voorzien van documentatie en er zijn handleidingen geschreven om hergebruik te vergemakkelijken.\\
 
-Dit verslag is als volgt ingedeeld. In Sectie \ref{bedrijf} wordt het bedrijf Alcatel-Lucent voorgesteld. De derde sectie behandelt de stage (Sectie \ref{stage}), waarin de afdeling waar de stage doorging wordt voorgesteld (Subsectie \ref{afdeling}), er wordt uitgelegd volgens welke methoden er wordt gewerkt (Subsectie \ref{methoden}). De stageopdracht wordt uitgelegd in Subsectie \ref{opdracht}. Het resultaat wordt besproken in Subsectie \ref{resultaat}. Gedurende de stage waren er ook initiatieven voor stagiairs, wat besproken wordt in Subsectie \ref{interns}.\\
-Sectie \ref{relatie} legt de link tussen de stage en de opleiding informatica. De kritische reflectie van de competenties die getracht werden verbeterd te worden is te vinden in Sectie \ref{reflectie}. Sectie \ref{besluit} bevat het besluit en de appendices zijn te vinden in Appendix \ref{lit_study}, \ref{enquete1}, \ref{enquete2} en \ref{competenties}. \todo{ref naar andere appendices toevoegen}
+Dit verslag is als volgt ingedeeld. In Sectie \ref{bedrijf} wordt het bedrijf Alcatel-Lucent voorgesteld. De derde sectie behandelt de stage (Sectie \ref{stage}), waarin de afdeling waar de stage doorging wordt voorgesteld (Subsectie \ref{afdeling}), er wordt uitgelegd volgens welke methoden er wordt gewerkt (Subsectie \ref{scrum} en \ref{ci}). De stageopdracht wordt uitgelegd in Subsectie \ref{opdracht}. Het resultaat wordt besproken in Subsectie \ref{resultaat}. Gedurende de stage waren er ook initiatieven voor stagiairs, wat besproken wordt in Subsectie \ref{interns}.\\
+Sectie \ref{relatie} legt de link tussen de stage en de opleiding informatica. De kritische reflectie van de competenties die getracht werden verbeterd te worden is te vinden in Sectie \ref{reflectie}. De conclusies over de opgedane ervaring tijdens de stage zijn te vinden in Sectie \ref{conclusies}. Sectie \ref{besluit} bevat het besluit en de appendices zijn te vinden in Appendix \ref{lit_study}, \ref{enquete1}, \ref{ppt}, \ref{enquete2} en \ref{competenties}. \todo{ref naar andere appendices toevoegen}
 
 \section{Het bedrijf: Alcatel-Lucent}
 \label{bedrijf}
 Alcatel-Lucent is een Frans bedrijf met de hoofdzetel in Frankrijk en vestigingen in Amerika, Azi\"e, het Midden-Oosten, Afrika en Europa, waaronder een vestiging in Antwerpen. \\
-De eerste funderingen van Alcatel-Lucent werden gelegd in 1869, met de opstart van Gray and Barton in Cleveland, Ohio, waarna ze zijn hernoemd naar Western Electric Manufacturing Company. Ongeveer tien jaar later zijn ze overgenomen door American Bell. In 1925 werd Bell Telephone Laboratories gevormd door de samenvoeging van the Western Electric Research Laboratories en een deel van het ingenieursdepartement van AT\&T. In deze Bell Labs zijn enkele belangrijke uitvindingen gedaan, zoals die van de transistor. Uit veel van deze uitvindingen heeft Bell Labs nooit een commerci\"eel voordeel gehaald, maar ze waren wel bepalend voor het industri\"ele landschap. In de jaren 1980 werd Alcatel gevormd door de samenvoeging van CIT-Alcatel en Thomson T\'el\'ecommunications. Aan het begin van de jaren '90 werd Compagnie G\'en\'erale d'Electricit\'e hernoemd naar Alcatel Alsthom, om aan het einde van de jaren '90 hernoemd te worden naar Alcatel. In 2006 zijn Alcatel en Lucent Technologies gefuseerd, om de huidige naam van Alcatel-Lucent aan te nemen. In 2015 zijn ze ten slotte overgenomen door Nokia, waarbij de overname en hernoeming naar Nokia effectief zal worden in 2016. Door deze overname zal Nokia het tweede grootste bedrijf in draadloze communicatie zijn, op het Zweedse Ericsson na. Op deze manier wordt de concurrentie met het Chinese Huawei vergroot op het gebied van draadloze communicatietechnologie.\\
+De eerste funderingen van Alcatel-Lucent werden gelegd in 1869, met de opstart van Gray and Barton in Cleveland, Ohio, waarna ze zijn hernoemd naar Western Electric Manufacturing Company. Ongeveer tien jaar later zijn ze overgenomen door American Bell. In 1925 werd Bell Telephone Laboratories gevormd door de samenvoeging van the Western Electric Research Laboratories en een deel van het ingenieursdepartement van AT\&T. In deze Bell Labs zijn enkele belangrijke uitvindingen gedaan, zoals die van de transistor. Uit veel van deze uitvindingen heeft Bell Labs nooit een commerci\"eel voordeel gehaald, maar ze waren wel bepalend voor het industri\"ele landschap. In de jaren 1980 werd Alcatel gevormd door de samenvoeging van CIT-Alcatel en Thomson T\'el\'ecommunications. Aan het begin van de jaren '90 werd Compagnie G\'en\'erale d'Electricit\'e hernoemd naar Alcatel Alsthom, om aan het einde van de jaren '90 hernoemd te worden naar Alcatel. In 2006 zijn Alcatel en Lucent Technologies gefuseerd, om de huidige naam van Alcatel-Lucent aan te nemen. In 2015 zijn ze ten slotte overgenomen door Nokia, waarbij de overname en hernoeming naar Nokia effectief zal worden in 2016. Door deze overname zal Nokia het tweede grootste bedrijf in draadloze communicatie zijn, op het Zweedse Ericsson na\footnote{http://www.reuters.com/article/2015/05/07/us-huawei-outlook-ceo-idUSKBN0NS23P20150507}. Op deze manier wordt de concurrentie met het Chinese Huawei vergroot op het gebied van draadloze communicatietechnologie.\\
 Alcatel-Lucent kan meer dan 250 telecomoperatoren wereldwijd tot zijn klanten rekenen, waaronder het Amerikaanse AT\&T, Verizon en het Belgische Proximus. Bij de eindgebruiker zijn ze niet echt gekend voor hun producten en diensten, maar binnen de telecomwereld zijn ze een vaste waarde.\todo{slecht verwoord?}\\
 Alcatel-Lucent heeft verschillende afdelingen, zijnde het \textit{core networking segment}, wat IP \textit{routing}, transport en platforms omvat en het \textit{access segment}, wat \textit{wireless} en \textit{fixed access} omvat, alsook \textit{licensing} en \textit{managed services}. In Antwerpen zijn er de afdelingen \textit{Fixed Network}, waarvan het hoofdkwartier in Antwerpen gevestigd is, IP \textit{routing} R\&D, \textit{Cloud, Network Functions Virtualization, Software-Defined Networking}, R\&D en IP platforms R\&D.\\
 De stage ging door bij Motive Network Analyzer-Copper (Motive NA-C). Zij staan ervoor in om het gebruik van het kopernetwerk te optimaliseren en fouten op de lijn te detecteren en verhelpen.\\
@@ -100,9 +102,8 @@ Naast deze afdelingen is er ook nog Bell Labs aanwezig in Antwerpen, waar men aa
 \label{afdeling}
 De stage ging door op de afdeling Motive Network Analyzer - Copper (NA-C) bij het team dat onder begeleiding staat van Bart Hemmeryckx-Deleersnijder. Motive NA-C heeft een team in Antwerpen, Chennai en Bangalor, waarbij de ontwikkeling van de software voornamelijk in Antwerpen gebeurt en het testen in Chennai en Bangalor. Er zijn altijd ook enkele testers van Chennai en Bangalor in Antwerpen, om de communicatie tussen de teams te verbeteren en de samenwerking te vergemakkelijken.\\
 Motive NA-C staat in voor het analyseren en onderhouden van de koperlijnen. Hun software zorgt ervoor dat de bandbreedte zo optimaal mogelijk gebruikt wordt en verandert dit gebruik dynamisch naargelang de beschikbare bandbreedte vari\"eert. Indien er fouten optreden op de lijn, kan hun software aanduiden waar op de lijn deze zich waarschijnlijk bevindt en waaraan de fout mogelijks te wijten is. Manieren om tot een oplossing te komen wordt samen met de netwerkanalyse voorzien.
-\subsubsection{Werkmethoden}
-\label{methoden}
-\paragraph{Scrum}
+\subsubsection{Scrum}
+\label{scrum}
 Het team van NA-C werkt volgens de \textit{scrum}-methode, wat een voorbeeld is van een \textit{agile} werkmethode, waarbij men ervan uitgaat dat de vereisten voor het project kunnen en zullen veranderen gedurende het project. Deze werkmethode staat tegenover de ``klassieke" watervalmethode, waarbij eerst de vereisten worden opgesteld om die vervolgens te implementeren en evalueren. Hierna komt men in de onderhoudsfase van het systeem. Het probleem met deze manier van werken is dat de communicatie tussen de klant en het bedrijf niet optimaal verloopt, gezien de klant vaak zijn mening over de vereisten van het project nog herziet nadat de eerste versie van de software is uitgebracht. De veranderingen kunnen dus vaak pas tijdens de onderhoudsfase worden doorgevoerd. Als de aangepaste vereisten pas in de onderhoudsfase ontdekt en aangekaart worden, is het heel kostelijk om (grote) veranderingen door te voeren in het reeds ontwikkelde systeem.\\
 Bij een \textit{agile} werkmethode, waar \textit{scrum} een onderdeel van is, gaat men er van uit dat de klant op voorhand niet perfect kan weten wat hij wil en dat hij dus de vereisten zal aanpassen. Hierop wordt dan ingespeeld tijdens het ontwikkelingsproces, door dit niet zoals het watervalmodel te zien, maar te werken in ontwikkelingsfases van korte perioden, die gewoonlijk \'e\'en tot vier weken duren. Op deze manier kunnen veranderingen in de vereisten snel opgepikt en doorgevoerd worden, wat het ontwikkelingsproces minder kostelijk maakt.\\
 De term ``\textit{scrum}" is afkomstig vanuit rugby, waarbij de twee teams voorovergebogen tegen elkaar leunen, met de hoofden bij elkaar. De bal wordt dan in deze groep gegooid, waarop ze proberen om de bal als eerste in hun bezit te krijgen.\\
@@ -134,7 +135,8 @@ In het NA-C team zijn er sprints van twee weken, wat wil zeggen dat er elke twee
 \label{user_story}
 \end{figure}
 
-\paragraph{Continuous integration}
+\subsubsection{Continuous integration}
+\label{ci}
 Aangezien er regelmatig \textit{releases} van software zijn, wordt er gebruik gemaakt van \textit{continuous integration}, wat inhoudt dat wanneer iemand klaar is met het schrijven van een stuk code en deze \textit{commit}, alle \textit{builds} en testen hierrond automatisch zullen \textit{runnen} zodat fouten in een vroeg stadium kunnen gevonden en opgelost worden.\\
 In Antwerpen wordt gebruik gemaakt van Jenkins\footnote{https://jenkins-ci.org/}, een \textit{open-source continuous integration} systeem. Jenkins heeft een dashboard dat een overzicht toont van alle \textit{builds}, maar er kan ook gefilterd worden op zelfgemaakte criteria, zodat enkel de statussen van bepaalde \textit{builds} zichtbaar zijn. Een screenshot \todo{moet dit cursief?} van dit dashboard is te zien in Figuur \ref{jenkins_orig}. Het overzicht van elke \textit{build} toont een gekleurde bol om aan te geven of de laatste \textit{build} geslaagd (groen of blauw) of gefaald (rood) is. Indien er testen gefaald zijn, dan zal de bol geel kleuren.
 Er is ook een weerbericht dat toont hoe stabiel de \textit{build} is, waarbij slecht weer duidt op een instabiele \textit{build} en goed weer op een stabiele \textit{build}. 
@@ -202,7 +204,7 @@ De verschillende bestanden worden als volgt gebruikt:
 \item Een Embedded Ruby bestand geeft via HTML-\textit{blocks} aan welke \textit{build} jobs getoond worden op het dashboard.
 \item Een \textit{plain} Ruby bestand doet de \textit{mapping} van de JSON-data op de variabelen in het dashboard en defini\"eert de namen van de \textit{build} jobs die getoond kunnen worden.
 \end{itemize}
-\paragraph{Sprint Review} Op het einde van de tweede sprint is de eerste versie van het dashboard gedemonstreerd voor het team in Antwerpen, Bangalor en Chennai. Er kon een werkend dashboard getoond worden dat informatie weergeeft over de Jenkins \textit{build} jobs die op een lokale \textit{server} draaiden. De feedback hierop was positief en enkele vragen van mensen in de verschillende teams konden beantwoord worden. \todo{goed gezegd?}
+\paragraph{Sprint Review} Op het einde van de tweede sprint is de eerste versie van het dashboard gedemonstreerd voor het team in Antwerpen, Bangalor en Chennai\footnote{De presentatie is te vinden in Appendix \ref{ppt}}. Er kon een werkend dashboard getoond worden dat informatie weergeeft over de Jenkins \textit{build} jobs die op een lokale \textit{server} draaiden. De feedback hierop was positief en enkele vragen van mensen in de verschillende teams konden beantwoord worden. \todo{goed gezegd?}
 \subsubsection{Sprint 3: Feedback en verbetering}
 \label{sprint3}
 Na de sprint review is de Alcatel-Lucent Jenkins-server ge\"integreerd in het dashboard, wat nog anderhalve dag van \textit{debugging} vroeg, gezien de Jenkins-server nu niet lokaal draaide, maar op een andere server (nl. de Jenkins-server van het NA-C team in Antwerpen). Ook gebruikt men bij Alcatel-Lucent een andere versie van Jenkins, waardoor bepaalde sleutelwoorden waarop \textit{geparset} wordt anders heten.\\
@@ -331,15 +333,48 @@ Ondanks het te laat beginnen gebruiken van versiecontrole, zijn mijn competentie
 \end{description}
 \end{itemize}
 
+\section{Conclusies}
+\label{conclusies}
+Het doel van de stage was om Jenkins-\textit{awareness} te cre\"eren door het maken van een dashboard waarop het overzicht van de \textit{build} statussen duidelijk te zien zijn. De eerste taak bestond uit het maken van een literatuurstudie om een idee te vormen van hoe een goed dashboard eruit moet zien. Ook werd er gekeken welke \textit{frameworks} er aanwezig zijn om dashboards te ontwikkelen. De literatuurstudie heeft ervoor gezorgd dat er duidelijke doelstellingen voor de layout van het dashboard voor ogen gesteld konden worden, waarbij de voorstellen die uit de enqu\^ete kwamen hielpen om extra zaken toe te voegen die belangrijk waren voor het team. Vervolgens is het dashboard ontwikkeld en zijn er extra elementen toegevoegd of veranderd na het uitvoeren van een tweede enqu\^ete. De doelstellingen die voor de stage werden gesteld zijn behaald, gezien er aan het einde van de stage een werkend dashboard kon voorgelegd worden. \todo{inkorten?}
+Doordat de begeleiding tijdens de stage erg goed was en omdat de medewerkers van het NA-C team in Antwerpen regelmatig hun mening gaven, is het dashboard met de gevraagde vereisten gerealiseerd kunnen worden.
+De stage was enorm leerzaam dankzij de enorme betrokkenheid bij alles wat het NA-C team in Antwerpen deed. Het bijwonen van sprint \textit{meetings} toonde hoe de \textit{agile} werkmethode zijn nut heeft en hoe goede communicatie essenti\"eel is voor het slagen van projecten, ook het project van de stage.
+Gedurende de stage werd er zelfstandig gewerkt aan doelen waarbij altijd bekeken werd of ze haalbaar waren.
+De stage heeft enorm veel geleerd over het samenwerken in grote groepen en over het (grotendeels) zelfstandig uitwerken van projecten. Doordat het project individueel werd gerealiseerd, werden alle aspecten zelfstandig\todo{beter verwoorden} uitgewerkt en was het enorm leerzaam doordat er in bestaande code moest ingewerkt worden (en deze dus helemaal begrepen moest worden) en de doelen voor het project zelfstandig behaald moesten worden, waar dit tijdens de opleiding in groepen gebeurt.\todo{aanvullen}
+
 \section{Besluit}
 \label{besluit}
 De stage ging voor 6 weken door bij Alcatel-Lucent in Antwerpen. De opdracht was het ontwerpen van een dashboard om de \textit{build} status van het \textit{continuous integration} systeem Jenkins te tonen. Het ontwikkelen van het dashboard is gebeurd gebruik makende van de \textit{agile} werkmethode, waarbij in sprints van twee weken gewerkt werd.\\
 Het dashboard is succesvol gemaakt binnen de opgelegde tijd met behulp van Dashing, draaiende op een Linux server.\\
 Tijdens de stage is gebruik gemaakt van onder andere Javascript, JQuery, HTML en (S)CSS. Mijn kennis van Ruby en Linux kwam hierbij ook van pas.\\
-Onder de goede begeleiding van Bart en dankzij de hulp van de mensen bij NA-C in Antwerpen heb ik grotendeels zelfstandig mijn doelen en het project uitgewerkt en geleerd hoe werken in teams in een bedrijf verloopt.
+Onder de goede begeleiding van Bart en dankzij de hulp van de mensen bij NA-C in Antwerpen heb ik grotendeels zelfstandig mijn doelen en het project uitgewerkt en geleerd hoe werken in teams in een bedrijf verloopt.\todo{conclusies toevoegen}
 
 \clearpage
 
+\begin{thebibliography}{11} 
+
+\bibitem{few} Stephen Few (2007). \emph{Dashboard Design For Real-Time Situation Awareness.} [09/07/2015, published at: http://www.perceptualedge.com/articles/Whitepapers/Dashboard\_Design.pdf]
+
+\iffalse
+https://www.alcatel-lucent.com/about/history
+http://www.reuters.com/article/2015/05/07/us-huawei-outlook-ceo-idUSKBN0NS23P20150507
+https://en.wikipedia.org/wiki/Waterfall_model
+https://en.wikipedia.org/wiki/Agile_software_development
+https://en.wikipedia.org/wiki/Scrum_%28software_development%29
+https://en.wikipedia.org/wiki/Scrum_%28rugby%29
+https://nl.wikipedia.org/wiki/Scrum_%28softwareontwikkelmethode%29
+https://nl.wikipedia.org/wiki/Scrum_%28rugby%29
+https://en.wikipedia.org/wiki/User_story
+https://www.atlassian.com/software/jira
+https://jenkins-ci.org/
+http://dashing.io/
+http://batmanjs.org/
+https://www.codecademy.com/
+https://github.com/Shopify/dashing/wiki/Additional-Widgets 
+http://www.slideshare.net/larrycai/learn-dashing-widget-in-90-minutes
+\fi
+
+
+\end{thebibliography}
 
 
 \begin{appendices}
@@ -522,6 +557,10 @@ Bijkomende opmerkingen zijn de volgende:
 
 \clearpage
 
+\section{Powerpoint presentatie dashboard sprint 2}
+\label{ppt}
+\includepdf[pages=-,nup=2x2]{demopresentation.pdf}
+
 \section{Enqu\^ete 2}
 \label{enquete2}
 \paragraph{Enqu\^ete}
@@ -581,6 +620,6 @@ Het is duidelijk dat enkele mensen nog vragen hadden bij het dashboard, dus is h
 
 \end{appendices}
 
-\todo{referentielijst?}
+\todo{verwijzen naar pdf?}
 
 \end{document}
